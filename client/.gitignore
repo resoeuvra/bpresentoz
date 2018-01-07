@@ -70,4 +70,5 @@ typings/
 .classpath
 .metadata
 .DS_Store
+*.iml
 
