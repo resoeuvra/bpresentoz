@@ -8,6 +8,7 @@ const APP_TARGET = process.env.APP_TARGET || 'WEB';
 const path = require("path");
 const webpack = require("webpack");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebPackDeployAfterBuild = require('webpack-deploy-after-build');
 
 const deployPath = "./public-assets/";
 const buildPath = "./dist/";
@@ -16,16 +17,17 @@ function getPlugins() {
     let plugins = [];
 
 
-    plugins.push(new CopyWebpackPlugin([
-        { from: 'config/' + CONFIG_FILE, to: buildPath + 'config/config.js'},
-        { from: 'html/index.html', to: buildPath + 'index.html'}
-        // todo : css
-    ]));
 
     plugins.push(new WebPackDeployAfterBuild({
         from: path.resolve(__dirname, buildPath),
         to: deployPath
     }));
+
+    plugins.push(new CopyWebpackPlugin([
+        { from: 'config/' + CONFIG_FILE, to: "../../" + deployPath + 'config/config.js'},
+        { from: 'src/html/index.html', to: "../../" + deployPath + 'index.html'}
+        // todo : css
+    ]));
 
     return plugins;
 }

@@ -22,8 +22,8 @@ port = program.port || port;
 app
     .use(logger('dev'))
     .use(logger(':remote-addr - :remote-user [:date[clf]] ":method :url HTTP/:http-version" :status :res[content-length]', {stream: accessLogStream}))
-    .use (express.static ('../../../client/public-assets'))
-    .use (express.static ('../../../data'));
+    .use (express.static ('../client/public-assets'))
+    .use (express.static ('../data'));
 
 app.listen(port, function () {
     console.log ('Listening on HTTP port ' + port);
