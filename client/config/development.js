@@ -1,5 +1,4 @@
-const CONFIG = {
-    baseServerUrlPath : "http://localhost:3000/presentation/api"
+var CONFIG = {
+   // baseServerUrlPath : "http://localhost:3000/presentation/api"
+    baseServerUrlPath : ""
 };
-
-module.exports = CONFIG;

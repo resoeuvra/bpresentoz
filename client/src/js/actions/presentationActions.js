@@ -15,3 +15,6 @@ export const SHOW_TOOLS = "SHOW_TOOLS";
 export const HIDE_TOOLS = "HIDE_TOOLS";
 export const SHOW_PAGE = "SHOW_PAGE";
 export const REQUEST_PAGE = "REQUEST_PRESENTATION_PAGE";
+export const REQUEST_STEP = "REQUEST_STEP";
+export const NEXT_STEP = "NEXT_STEP";
+export const PREVIOUS_STEP = "PREVIOUS_STEP";

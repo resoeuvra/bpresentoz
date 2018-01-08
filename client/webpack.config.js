@@ -4,7 +4,6 @@ const IS_PROD_BUILD = (process.env.NODE_ENV === 'production');
 const CONFIG_FILE = IS_PROD_BUILD ? 'production.js' : 'development.js';
 const APP_TARGET = process.env.APP_TARGET || 'WEB';
 
-
 const path = require("path");
 const webpack = require("webpack");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -15,8 +14,6 @@ const buildPath = "./dist/";
 
 function getPlugins() {
     let plugins = [];
-
-
 
     plugins.push(new WebPackDeployAfterBuild({
         from: path.resolve(__dirname, buildPath),
