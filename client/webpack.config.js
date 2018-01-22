@@ -60,7 +60,16 @@ module.exports = [{
                     path.resolve(__dirname, "src/ts")
                 ],
                 loader: 'ts-loader'
-            }
+            },
+//            {
+//                enforce: 'pre',
+//                test: /\.js$/,
+//                include: [
+//                    path.resolve(__dirname, "src/js")
+//                ],
+//                loader: 'eslint-loader'
+//            }
+
         ]
     },
 

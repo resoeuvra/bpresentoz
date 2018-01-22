@@ -1,9 +1,8 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux'
-import createSagaMiddleware from 'redux-saga'
 import reducers from '../reducers/presentationReducers'
-import { helloSaga } from '../sagas/uiSagas'
+import { sagaMiddleware, rootSaga } from '../sagas/root';
 
-const sagaMiddleware = createSagaMiddleware();
+
 
 const store = createStore(
     reducers,
@@ -12,6 +11,7 @@ const store = createStore(
         sagaMiddleware
     ));
 
-sagaMiddleware.run(helloSaga);
+
+sagaMiddleware.run(rootSaga);
 
 export default store;
