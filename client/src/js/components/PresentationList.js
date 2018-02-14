@@ -2,10 +2,8 @@ import React from 'react';
 import PresentationLink from './PresentationLink';
 
 const PresentationList = ({presentations}) => {
-  console.log("liste");
 
   if (presentations !== null) {
-    console.log(presentations.presentations);
     return (
      <article className="presentationList">
        <ul>

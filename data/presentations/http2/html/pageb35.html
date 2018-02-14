@@ -1,0 +1,23 @@
+<article class="page" id="page35">
+    <header>
+        <h1>Première étape, se procurer un certificat SSL</h1>
+    </header>
+    <ul>
+        <li>Comme dirait Séraphin Poudrier, un certificat SSL, ça coûte cher, viande à chien.</li>
+        <li>La solution : Let's encrypt <a href="https://letsencrypt.org"></a>
+            <ul>
+                <li>Sur votre serveur Linux, installer "Let's encrypt" </li>
+                <li>Pré-requis : Installer git et bc (yum install git, apt-get install git)</li>
+                <li>Installer dans /opt/letsencrypt <code>sudo git clone https://github.com/letsencrypt/letsencrypt /opt/letsencrypt</code></li>
+                <li>Arrêter le serveur Web et s'assurer que le port 443 est bien ouvert (voir /etc/sysconfig/iptables)</li>
+                <li><code>./letsencrypt-auto certonly --standalone -d test.benoitpiette.com</code></li>
+                <li>letsencrypt va finaliser son installation et vous demandera la liste des domaines</li>
+                <li>si tout va bien, les certificats et clés privées seront disponibles dans /etc/letsencrypt/live/test.benoitpiette.com</li>
+            </ul>
+        </li>
+        <li>Votre DNS doit vraiment pointer vers ce serveur pour que let's encrypt puisse valider que vos domaines vous appartiennent</li>
+        <li>Les certificats seront valides pendant trois mois. Vous pouvez automatiser les renouvellements par des scripts.</li>
+        <li>Plusieurs plugins existent, entre autres pour Apache</li>
+    </ul>
+
+</article>

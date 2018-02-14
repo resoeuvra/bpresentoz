@@ -1,0 +1,14 @@
+{
+  "name": "intro-webvr",
+  "title": "Introduction à WebVR",
+  "pages": [
+    {
+      "title": "Introduction à WebVR",
+      "html": "<article class=\"page\" id=\"page0\" style=\"overflow: hidden\">\n    <h1>Introduction à WebVR</h1>\n    <figure class=\"imgs\"  style=\"margin-top:0\">\n        <img width=\"70%\" src=\"/intro-webvr/img/dragon_by_desteny_love.png\" alt=\"Dragon\">\n    </figure>\n    <h2>Par <a rel=\"author\" href=\"/\">Benoit Piette</a></h2>\n</article>"
+    },
+    {
+      "title": "À propos de moi",
+      "html": "<article class=\"page peu\" id=\"page2\">\n    <header>\n        <h1>À propos de moi</h1>\n    </header>\n    <h2>Benoit Piette</h2>\n    <ul>\n        <li>Architecte de solution - à son compte - Résoeuvra inc.</li>\n        <li>Dévelopeur / analyste / architecte Web depuis 1996</li>\n        <li>Co-fondateur HTML5Mtl</li>\n    </ul>\n    <ul>\n        <li><a href=\"https://benoitpiette.com/\">https://benoitpiette.com</a></li>\n        <li><a href=\"https://twitter.com/benoitpiette\">https://twitter.com/benoitpiette</a></li>\n        <li><a href=\"https://www.linkedin.com/in/benoit-piette-5712aa6\">https://www.linkedin.com/in/benoit-piette-5712aa6</a></li>\n        <li>Les slides de la présentations sont disponibles sur <a href=\"https://benoitpiette.com/conferences/http2-2016/\">https://benoitpiette.com/conferences/http2-2016/</a></li>\n    </ul>\n</article>"
+    }
+  ]
+}

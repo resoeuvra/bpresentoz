@@ -1,9 +1,0 @@
-{
-  "name": "intro-webvr",
-  "pages": [
-    {
-      "title": "intro-webvr",
-      "html": "<article class=\"page\" id=\"page0\" style=\"overflow: hidden\">\r\n    <h1>Introduction \u00E0 WebVR<\/h1>\r\n    <figure class=\"imgs\"  style=\"margin-top:0\">\r\n        <img width=\"70%\" src=\"\/intro-webvr\/img\/dragon_by_desteny_love.png\" alt=\"Dragon\">\r\n    <\/figure>\r\n    <h2>Par <a rel=\"author\" href=\"\/\">Benoit Piette<\/a><\/h2>\r\n<\/article>"
-    }
-  ]
-}

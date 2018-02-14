@@ -1,7 +1,6 @@
 "use strict";
 
-const IS_PROD_BUILD = (process.env.NODE_ENV === 'production');
-const CONFIG_FILE = IS_PROD_BUILD ? 'production.js' : 'development.js';
+const CONFIG_FILE = 'config.js';
 const APP_TARGET = process.env.APP_TARGET || 'WEB';
 
 const path = require("path");

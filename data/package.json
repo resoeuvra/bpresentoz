@@ -1,0 +1,17 @@
+{
+  "name": "bpresentoz-data",
+  "version": "0.0.1",
+  "description": "Presentation data and tools ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": "https://github.com/resoeuvra/bpresentoz",
+  "author": "Benoit Piette",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "walk": "^2.3.9",
+    "walk-sync": "^0.3.2"
+  }
+}

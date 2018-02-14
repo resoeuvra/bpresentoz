@@ -1,0 +1,15 @@
+<article class="page" id="page7">
+    <header>
+        <h1>Problèmes avec HTTP 1.0 et HTTP 1.1</h1>
+    </header>
+    <figure class="imgs">
+        <img src="/http2/img/blocage.svg" width="100%" alt="Illustration du blocage en tête de file" />
+        <figcaption>Blocage en tête de file (Head of line blocking)</figcaption>
+    </figure>
+    <ul>
+        <li>Le pipelining HTTP 1.1 n'aide pas vraiment le blocage en tête de file</li>
+        <li>Des requêtes malicieuses peuvent causer des denis de service</li>
+        <li>N'est pas pris en charge par défaut sur les navigateurs dû à de nombreux problèmes de serveurs non conformes</li>
+        <li>HTTP 1.1 ne prends pas en charge le multiplexage (plusieurs signaux en même temps)</li>
+    </ul>
+</article>

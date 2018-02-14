@@ -1,18 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
-import { helloSaga } from '../sagas/uiSagas';
 import Page from '../containers/Page';
+import ToolsContainer from '../containers/ToolsContainer';
 import PresentationsHome from '../containers/PresentationsHome';
+
 
 class App extends React.Component {
   render() {
-    console.log(this.props);
-    let isPresentationActive = (this.props.currentPresentationName !== null);
+    let isPresentationActive = this.props.presentationActive;
     if (!isPresentationActive) {
-      return <div>Liste:<PresentationsHome /></div>
+      return <div><PresentationsHome /></div>
     } else {
-      return <div>Page: <Page /></div>
+      return <div><Page /><ToolsContainer /></div>
     }
   }
 }
@@ -20,9 +20,11 @@ class App extends React.Component {
 const mapStateToProps = state => {
   // switch between the type of page and the type of component
   return {
-    currentPresentationName: state.currentPresentationName
+    presentationActive: state.ui.active
   }
 };
+
+
 
 App = connect(mapStateToProps)(App);
 

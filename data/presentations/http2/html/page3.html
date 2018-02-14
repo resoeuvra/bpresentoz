@@ -1,0 +1,29 @@
+<article class="page" id="page3">
+    <header>
+        <h1>La ligne de vie du protocole HTTP</h1>
+    </header>
+    <figure>
+        <img src="/http2/img/histoire-http.svg" width="80%" alt="HTTP 0.9 en 1991, HTTP 1.0 en 1996, HTTP 1.1 en 1999 et HTTP2 en 2015" />
+        <figcaption>Ligne de vie de HTTP</figcaption>
+    </figure>
+    <table>
+        <thead><tr><th>HTTP 1.0</th><th>HTTP 1.1</th></tr></thead>
+        <tbody><tr><td>
+            <ul>
+                <li>Une seule requête par connexion TCP</li>
+                <li>Peu de fonctionalités pour le caching</li>
+                <li>en-tête <code>Host</code> facultative</li>
+            </ul>
+        </td><td>
+            <ul>
+                <li>Plusieurs requêtes par connexion TCP (<code>Keep Alive</code>)</li>
+                <li>Plus de fonctionalités pour le caching (<code>if-modified-since, etags, if-non-match</code>)</li>
+                <li>en-tête <code>Host</code> obligatoire</li>
+                <li>Authentification Digest et Proxy</li>
+                <li>Verbe <code>OPTIONS</code></li>
+                <li>Mise à niveau du protocole en-tête <code>upgrade</code></li>
+                <li>Négotiation de contenu plus avancée (qualité)</li>
+            </ul>
+        </td></tr></tbody>
+    </table>
+</article>

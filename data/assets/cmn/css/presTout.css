@@ -1,0 +1,96 @@
+
+@media screen {
+
+body {
+	background-image:none
+}
+
+
+h1 {
+	padding:50px 0px 100px 250px;
+}
+
+
+.navDiapo {
+	background-color:#930;	
+	clear:both;
+	margin-top:50px
+}
+
+.navSuiv, .navPrec, .navTab, .noPage {
+	display:block;
+	font-weight:normal;
+	height:15px;
+	font-size:9pt;
+	padding:13px 10px 10px 50px;
+	width:200px;
+
+
+}
+
+
+.noPage {
+	margin: -38px 0px 0px 90%;
+	width:30px;
+	height:15px;
+	padding:13px 10px 10px 50px;
+	font-size:8pt;
+	color:#fff;
+	background-color:#930;
+	z-index:95;
+	font-weight:bold;
+
+}
+
+.navDiapo a:visited, .navDiapo a:active,.navDiapo a:link {
+	text-decoration:none;
+	color:#fff;
+}
+
+
+.navDiapo a:hover {
+	text-decoration:underline
+}
+
+
+.navJs {
+	display:none;
+
+}
+
+#sectionTitre {
+	display:none
+}
+
+a, a:visited, a:active, a:link {
+	text-decoration:none;
+	color:#600;
+}
+
+a:hover, a.navJs:hover {
+	text-decoration:underline
+}
+ul {
+	list-style:square outside none
+}
+
+p {
+
+}
+ul, ol {
+	margin:15px 3% 5px 1%
+}
+p {
+	margin:15px 2% 5px 2%;
+}
+p.note {
+	display:block
+}
+li {
+	padding-top:1px;
+	padding-bottom:1px;
+}
+
+
+
+}

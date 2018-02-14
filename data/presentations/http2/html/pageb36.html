@@ -1,0 +1,17 @@
+<article class="page" id="page36">
+    <header>
+        <h1>Nginx CentOS 7</h1>
+    </header>
+    <ul>
+        <li>Nginx prends en charge une bonne partie de HTTP2 (sauf server push) depuis novembre 2015</li>
+        <li>La version 1.9.12 (au moment d'écrire ces lignes - mars 2016) n'est pas une version stable</li>
+        <li>La version stable 1.10.1 est disponible depuis juin 2016</li>
+        <li>CentOS n'a jamais les dernières versions des packages (pour des bonnes raisons)</li>
+        <li>APLN nécessite openssl 1.0.2 - CentOS a 1.0.1</li>
+        <li>Le plus simple est de compiler nginx statiquement lié à openssl 1.0.2 (installer 1.0.2 sur CentOS risque de vous causer du trouble)</li>
+        <li>openssl 1.1.0 est maintenant disponible (juin 2016)</li>
+        <li>Utiliser les repo "remi" "epel" pour installer les dépendances (nombreuses pcre-devel)</li>
+        <li>Télécharger la source de nginx, et télécharger la source de openssl 1.0.2g dans le même répertoire</li>
+        <li>./configure avec --with-openssl=./openssl-1.0.2g </li>
+    </ul>
+</article>

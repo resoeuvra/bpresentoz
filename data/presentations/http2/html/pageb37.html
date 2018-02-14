@@ -1,0 +1,29 @@
+<article class="page" id="page37">
+    <header>
+        <h1>Nginx CentOS 7</h1>
+    </header>
+    <ul>
+        <li>Configurer http2 avec nginx</li>
+    </ul>
+    <figure>
+                    <pre><code>
+                server {
+                    listen 80;
+                    server_name test.benoitpiette.com;
+                    return 301 https://$host$request_uri;
+                }
+                server {
+                        server_name  test.benoitpiette.com;
+                        root /srv/test.benoitpiette.com/html;
+
+                        listen 443 ssl http2;
+
+                        ssl_certificate /etc/letsencrypt/live/test.benoitpiette.com/fullchain.pem;
+                        ssl_certificate_key /etc/letsencrypt/live/test.benoitpiette.com/privkey.pem;
+                      ...
+                 }
+
+                    </code></pre>
+        <figcaption>Exemples de configuration nginx avec http2</figcaption>
+    </figure>
+</article>

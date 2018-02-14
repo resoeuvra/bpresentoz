@@ -1,0 +1,23 @@
+<article class="page" id="page41">
+    <header>
+        <h1>Configurer http2 avec IIS sous Windows 10</h1>
+    </header>
+    <ul>
+        <li>Pris en charge par défaut - il n'y a rien à faire...</li>
+        <li>Il faut toutefois modifier le format de nos certificats SSL de letsencrypt</li>
+        <li><code>openssl pkcs12 -inkey privkey1.pem -in fullchain1.pem -export -out iis_pfx.pfx</code></li>
+        <li>Et configurer SSL
+            <ol>
+                <li>Ouvrir IIS Manager</li>
+                <li>Aller à Nom de la machine, Section IIS, Server Certificates</li>
+                <li>Dans le menu de droite : Action -> Import</li>
+                <li>Choisir le fichier pfx créé précédemment et le mettre dans le store Certificate hosting</li>
+                <li>Aller ensuite avec le menu gauche sur votre site Web</li>
+                <li>Sur le menu de droite, choisir Action -> Bindings</li>
+                <li>Faire Add -> Choisir votre hostname, port 443 et associer votre certificat</li>
+            </ol>
+
+        </li>
+        <li>Microsoft offre une API pour le server Push <a href="https://msdn.microsoft.com/en-us/library/system.web.httpresponse.pushpromise%28v=vs.110%29.aspx">HttpResponse.PushPromise</a></li>
+    </ul>
+</article>

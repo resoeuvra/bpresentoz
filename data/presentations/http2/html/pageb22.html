@@ -1,0 +1,14 @@
+<article class="page" id="page22">
+    <header>
+        <h1>À quoi ressemble HTTP/2 ?</h1>
+    </header>
+    <h2>L'unité de base du protocole est la trame (frame)</h2>
+    <ul>
+        <li>Une trame commence par un en-tête de 9 octets et est suivi par une charge (payload) de longueur variable</li>
+        <li>Les 24 premiers bits sont un Integer qui spécifie la longueur du payload</li>
+        <li>Les prochains 16 bits déterminent le type de trame et les paramètres pour celui-ci</li>
+        <li>Les 31 bits suivants sont l'identifiant (Integer) pour le signal traversant le réseau (Stream) (ex: un fichier html -  cela determine à quel fichier html la trame appartient)</li>
+        <li>Suit un bit réservé toujours à 0</li>
+        <li>La trame se termine par la charge / le payload qui peut être une portion de l'en-tête HTTP, un CSS, HTML, image etc.</li>
+    </ul>
+</article>

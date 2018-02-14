@@ -1,0 +1,19 @@
+<article class="page" id="page23">
+    <header>
+        <h1>Les types de trames</h1>
+    </header>
+    <br>
+    <table>
+        <tr><th>DATA Données</th><td>Contient des données associées à un signal / stream</td></tr>
+        <tr><th>HEADERS en-têtes</th><td>Utilisé pour créer un nouveau signal et contient des combinaisons clés / valeurs. Équivalents aux en-têtes HTTP 1.1</td></tr>
+        <tr><th>PRIORITY Priorités</th><td>Définit du point de vue de l'expéditeur, une recommandation sur la priorité d'un signal</td></tr>
+        <tr><th>RST_STREAM Réinitialiser le signal</th><td>Permet de terminer un signal pour des raisons anormales</td></tr>
+        <tr><th>SETTINGS Paramètres</th><td>Contient des paramètres de configuration sur la communication réseau entre deux points de terminaison (endpoints)</td></tr>
+        <tr><th>PUSH_PROMISE (Promesse de futur stream)</th><td>Notifie le récepteur en avance des prochains streams que l'expéditeur va envoyer</td></tr>
+        <tr><th>PING</th><td>Mécanisme pour mesurer le délai allez-retour ainsi que pour vérifier si une connexion ne recevant plus de données est encore active </td></tr>
+        <tr><th>GOAWAY (Va-t'en)</th><td>Sert à initier la fin d'une connexion où lorsqu'il y a une erreur irrécupérable</td></tr>
+        <tr><th>WINDOW_UPDATE</th><td>Contrôle du flux de données sur les stream ou sur la connexion</td></tr>
+        <tr><th>CONTINUATION</th><td>Sert à spécifier l'envoi de plusieurs fragments d'en-têtes ou de PUSH_PROMISE pour un même stream</td></tr>
+    </table>
+
+</article>

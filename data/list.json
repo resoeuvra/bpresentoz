@@ -1,7 +1,14 @@
 {
   "presentations": [
     {
-    "name": "intro-webvr"
+      "name": "http2",
+      "key": "http2",
+      "title": "HTTP/2 Ça ne change pas grand chose... sauf que"
+    },
+    {
+      "name": "intro-webvr",
+      "key": "intro-webvr",
+      "title": "Introduction à WebVR"
     }
   ]
 }

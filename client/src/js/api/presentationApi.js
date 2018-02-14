@@ -17,7 +17,6 @@ const presentationApi = {
             resolve(response.json());
           },
           error => {
-            console.log("error");
             reject(error);
           },
         )
@@ -29,7 +28,6 @@ const presentationApi = {
         let url = CONFIG.baseServerUrlPath + LIST_PRESENTATION_PATH;
         fetch(url).then(
           response => {
-            console.log(response);
             if (response.status >= 400) {
               reject(response);
             }

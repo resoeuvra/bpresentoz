@@ -1,0 +1,18 @@
+<article class="page" id="page40">
+    <header>
+        <h1>Apache 2 et Ubuntu 15.10</h1>
+    </header>
+    <ul>
+        <li>Configurer http2 avec Apache - Server Push avec les directives de mod headers</li>
+    </ul>
+    <figure>
+                     <pre><code>
+                         &lt;Location /index.html>
+                             Header add Link "&lt;/css/site.css>;rel=preload"
+                             Header add Link "&lt;/images/logo.jpg>;rel=preload"
+                         &lt;/Location>
+
+                     </code></pre>
+        <figcaption>Exemples configuration apache2 avec http2</figcaption>
+    </figure>
+</article>

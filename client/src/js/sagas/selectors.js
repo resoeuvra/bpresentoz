@@ -1,5 +1,5 @@
-export const getPresentationName = state => state.currentPresentationName;
-export const getCurrentPage = state => state.presentationCurrentPage;
-export const getCurrentStep = state => state.presentationCurrentStep;
+export const getPresentationName = state => state.ui.name;
+export const getCurrentPage = state => state.ui.pageShown;
+export const getCurrentStep = state => state.ui.stepShown;
 
 

@@ -1,0 +1,28 @@
+<article class="page" id="page39">
+    <header>
+        <h1>Apache 2 et Ubuntu 15.10</h1>
+    </header>
+    <ul>
+        <li>Configurer http2 avec Apache</li>
+    </ul>
+    <figure>
+                     <pre><code>
+                         NameVirtualHost *:80
+                         &lt;VirtualHost *:80>
+                            ServerName test.benoitpiette.com
+                            Redirect permanent / https://test.benoitpiette.com/
+                         &lt;/VirtualHost>
+                         listen 443
+                         &lt;VirtualHost *:443>
+                             ServerName test.benoitpiette.com
+                             SSLEngine On
+                             SSLCertificateFile "/etc/letsencrypt/live/test.benoitpiette.com/fullchain.pem"
+                             SSLCertificateKeyFile "/etc/letsencrypt/live/test.benoitpiette.com/privkey.pem"
+
+                             Protocols h2 http/1.1
+                         &lt;/VirtualHost>
+
+                     </code></pre>
+        <figcaption>Exemples configuration apache2 avec http2</figcaption>
+    </figure>
+</article>

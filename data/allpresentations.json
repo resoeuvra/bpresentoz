@@ -1,0 +1,106 @@
+{
+  "http2": {
+    "name": "http2",
+    "description": "HTTP/2 Ça ne change pas grand chose... sauf que",
+    "pages": [
+      {
+        "title": "HTTP/2 Ça ne change pas grand chose... sauf que",
+        "html": "<article class=\"page home\" id=\"page0\" style=\"overflow: hidden\">\n    <h1>HTTP/2 Ça ne change pas grand chose... sauf que</h1>\n    <figure class=\"imgs\"  style=\"margin-top:0\">\n        <img width=\"70%\" src=\"/http2/img/dragon_by_desteny_love.png\" alt=\"Dragon\">\n    </figure>\n    <h2>Par <a rel=\"author\" href=\"/\">Benoit Piette</a></h2>\n</article>\n\n\n"
+      },
+      {
+        "title": "HTTP/2 Ça ne change pas grand chose... sauf que",
+        "html": "<article class=\"page peu\" id=\"page1\">\n    <header>\n        <h1>HTTP/2 Ça ne change pas grand chose... sauf que</h1>\n    </header>\n    <ol>\n        <li><a href=\"#page3\" accesskey=\"1\">L'historique du protocole HTTP ?</a>\n        <li><a href=\"#page5\" accesskey=\"2\">Les problèmes de HTTP 1.1</a>\n        <li><a href=\"#page11\" accesskey=\"3\">Techniques pour améliorer la performance</a>\n        <li><a href=\"#page19\" accesskey=\"4\">Les fonctions de HTTP/2</a>\n        <li><a href=\"#page32\" accesskey=\"5\">Impacts sur le développement Web</a>\n        <li><a href=\"#page33\" accesskey=\"6\">Exemples de configurations de serveurs Web</a>\n        <li><a href=\"#page44\" accesskey=\"7\">Perspectives pour HTTP/2</a>\n    </ol>\n\n</article>"
+      },
+      {
+        "title": "À propos de moi",
+        "html": "<article class=\"page peu\" id=\"page2\">\n    <header>\n        <h1>À propos de moi</h1>\n    </header>\n    <h2>Benoit Piette</h2>\n    <ul>\n        <li>Architecte de solution - à son compte - Résoeuvra inc.</li>\n        <li>Dévelopeur / analyste / architecte Web depuis 1996</li>\n        <li>Co-fondateur HTML5Mtl</li>\n    </ul>\n    <ul>\n        <li><a href=\"https://benoitpiette.com/\">https://benoitpiette.com</a></li>\n        <li><a href=\"https://twitter.com/benoitpiette\">https://twitter.com/benoitpiette</a></li>\n        <li><a href=\"https://www.linkedin.com/in/benoit-piette-5712aa6\">https://www.linkedin.com/in/benoit-piette-5712aa6</a></li>\n        <li>Les slides de la présentations sont disponibles sur <a href=\"https://benoitpiette.com/conferences/http2-2016/\">https://benoitpiette.com/conferences/http2-2016/</a></li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "La ligne de vie du protocole HTTP",
+        "html": "<article class=\"page\" id=\"page3\">\n    <header>\n        <h1>La ligne de vie du protocole HTTP</h1>\n    </header>\n    <figure>\n        <img src=\"/http2/img/histoire-http.svg\" width=\"80%\" alt=\"HTTP 0.9 en 1991, HTTP 1.0 en 1996, HTTP 1.1 en 1999 et HTTP2 en 2015\" />\n        <figcaption>Ligne de vie de HTTP</figcaption>\n    </figure>\n    <table>\n        <thead><tr><th>HTTP 1.0</th><th>HTTP 1.1</th></tr></thead>\n        <tbody><tr><td>\n            <ul>\n                <li>Une seule requête par connexion TCP</li>\n                <li>Peu de fonctionalités pour le caching</li>\n                <li>en-tête <code>Host</code> facultative</li>\n            </ul>\n        </td><td>\n            <ul>\n                <li>Plusieurs requêtes par connexion TCP (<code>Keep Alive</code>)</li>\n                <li>Plus de fonctionalités pour le caching (<code>if-modified-since, etags, if-non-match</code>)</li>\n                <li>en-tête <code>Host</code> obligatoire</li>\n                <li>Authentification Digest et Proxy</li>\n                <li>Verbe <code>OPTIONS</code></li>\n                <li>Mise à niveau du protocole en-tête <code>upgrade</code></li>\n                <li>Négotiation de contenu plus avancée (qualité)</li>\n            </ul>\n        </td></tr></tbody>\n    </table>\n</article>"
+      },
+      {
+        "title": "L'évolution de l'utilisation de HTTP",
+        "html": "<article class=\"page\" id=\"page4\">\n    <header>\n        <h1>L'évolution de l'utilisation de HTTP</h1>\n    </header>\n    <figure class=\"imgs\">\n        <img src=\"/http2/img/object-evolution.png\"  alt=\"Cette image n'est pas accessible, contient un graphe de nombre de connexions et de la taille des objets dans une page Web de 2012 à 2016. Nous voyons que le poids des objets augmente beaucoup et que celle du nombre de connexion, moins\"  />\n        <!--        <img src=\"https://chart.googleapis.com/chart?chd=t:-1|74,74,77,77,77,78,77,78,78,79,81,80,81,81,81,83,84,81,82,83,84,84,82,84,87,86,85,86,86,86,86,86,85,84,84,82,84,83,83,84,84,86,85,81,82,85,86,86,87,88,88,88,88,88,89,90,90,90,91,91,92,92,96,93,93,94,94,94,95,94,95,95,95,96,95,93,94,93,93,93,94,95,95,95,95,96,96,97,96,97,98,99,99,99,99,100,95,95,93,94,96,97,98,94,93,99,98,100,100,101,101,103,102,100,99,100,93,99,99,102,101,101,99,99,100,100,100,100|-1|702,705,726,716,717,724,709,734,735,742,769,760,772,777,784,799,807,785,807,816,831,838,830,893,929,960,965,955,962,966,968,973,1008,1011,1018,1042,1059,1067,1068,1090,1097,1124,1105,1092,1098,1227,1239,1249,1269,1285,1286,1284,1280,1270,1292,1311,1335,1400,1411,1427,1448,1462,1466,1485,1492,1521,1532,1551,1585,1590,1617,1614,1653,1701,1682,1681,1687,1710,1703,1728,1739,1762,1765,1775,1783,1808,1829,1850,1821,1855,1860,1890,1899,1944,1925,1907,1953,1958,1931,1944,1977,1999,2008,1958,1950,2061,2062,2099,2087,2131,2135,2162,2161,2169,2167,2182,1976,2191,2194,2219,2219,2262,2232,2225,2253,2268,2281,2299&chxl=0:|+|+|12%2F17|+|+|+|+|2%2F26|+|+|+|+|5%2F16|+|+|+|+|8%2F1|+|+|+|+|10%2F15|+|+|+|+|1%2F1|+|+|+|+|3%2F15|+|+|+|+|6%2F1|+|+|+|+|8%2F15|+|+|+|+|11%2F1|+|+|+|+|1%2F15|+|+|+|+|4%2F1|+|+|+|+|6%2F15|+|+|+|+|9%2F1|+|+|+|+|11%2F15|+|+|+|+|2%2F15|+|+|+|+|5%2F1|+|+|+|+|7%2F15|+|+|+|+|10%2F1|+|+|+|+|12%2F15|+|+|+|+|3%2F1|+|+|+|+|5%2F15|+|+|+|+|8%2F1|+|+|+|+|10%2F15|+|+|+|+|1%2F1|+|+|+|+|3%2F15&chxt=x,y,r&chs=600x300&cht=lxy&chco=15A50E,006600&chm=N,15A50E,0,1::5,12,,h::8|N**kB,006600,1,1::5,12,,h::8&chds=9,99,60,300,9,99,600,3000&chts=006600,24&chtt=Taille+des+donn%C3%A9es+/+Nombre+de+d'objets&chma=5,5,5,25&chls=1,6,3|1&chxr=1,600,3000,500|2,60,300,100&chxs=1,006600,11.5,-0.5,lt,006600,006600|2,15A50E,11.5,-0.5,lt,15A50E,15A50E&chxtc=0,4|1,4&chxp=0&chdl=Nombre+d'objets|Taille+totale+des+donn%C3%A9es+%28kB%29&chdlp=bv|\"  alt=\"Cette image n'est pas accessible, contient un graphe de nombre de connexions et de la taille des objets dans une page Web de 2012 à 2016. Nous voyons que le poids des objets augmente beaucoup et que celle du nombre de connexion, moins\"  />-->\n        <figcaption>Évolution de la taille et du nombre d'objets par page (http://httparchive.org) </figcaption>\n\n    </figure>\n    <ul>\n        <li>Le nombre d'objets dépasse 100 et la taille 2Mo</li>\n        <li>Le problème de latence revient à cause des appareils mobiles</li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "Problèmes avec HTTP 1.0 et HTTP 1.1",
+        "html": "<article class=\"page peu\" id=\"page5\">\n    <header>\n        <h1>Problèmes avec HTTP 1.0 et HTTP 1.1</h1>\n    </header>\n    <ul>\n        <li>La spécification est énorme - 176 pages - beaucoup de règles d'analyse syntaxique</li>\n        <li>Très sensible à la latence du réseau (le délai allez-retour)</li>\n        <li>Utilise mal le protocole sous-jacent (TCP) / du temps est perdu</li>\n        <li>Blocage en tête de file</li>\n        <li>Plusieurs techniques pour diminuer les problèmes, plusieurs sont des \"hack\"</li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "Problèmes avec HTTP 1.0 et HTTP 1.1",
+        "html": "<article class=\"page\" id=\"page6\">\n    <header>\n        <h1>Problèmes avec HTTP 1.0 et HTTP 1.1</h1>\n    </header>\n    <figure class=\"imgs\">\n        <img src=\"/http2/img/pipelining.svg\" width=\"80%\" alt=\"Illustration du pipelining\" />\n        <figcaption>Connexions HTTP 1.1 et Pipelining</figcaption>\n    </figure>\n</article>"
+      },
+      {
+        "title": "Problèmes avec HTTP 1.0 et HTTP 1.1",
+        "html": "<article class=\"page\" id=\"page7\">\n    <header>\n        <h1>Problèmes avec HTTP 1.0 et HTTP 1.1</h1>\n    </header>\n    <figure class=\"imgs\">\n        <img src=\"/http2/img/blocage.svg\" width=\"100%\" alt=\"Illustration du blocage en tête de file\" />\n        <figcaption>Blocage en tête de file (Head of line blocking)</figcaption>\n    </figure>\n    <ul>\n        <li>Le pipelining HTTP 1.1 n'aide pas vraiment le blocage en tête de file</li>\n        <li>Des requêtes malicieuses peuvent causer des denis de service</li>\n        <li>N'est pas pris en charge par défaut sur les navigateurs dû à de nombreux problèmes de serveurs non conformes</li>\n        <li>HTTP 1.1 ne prends pas en charge le multiplexage (plusieurs signaux en même temps)</li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "Problèmes avec HTTP 1.0 et HTTP 1.1",
+        "html": "<article class=\"page\" id=\"page8\">\n    <header>\n        <h1>Problèmes avec HTTP 1.0 et HTTP 1.1</h1>\n    </header>\n    <figure class=\"imgs\">\n        <img src=\"/http2/img/latence.svg\" width=\"90%\" alt=\"Les bénéfices d'une augmentation de la bande passante diminuent - une diminution de la latence a plus d'impact\" />\n        <figcaption>Latence et bande passante</figcaption>\n    </figure>\n    <ul>\n        <li>Le délai allez-retour a un grand impact sur le temps de chargement d'une page.</li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "Statistiques sur la composition des pages Web",
+        "html": "<article class=\"page peu\" id=\"page9\">\n    <header>\n        <h1>Statistiques sur la composition des pages Web</h1>\n    </header>\n    <figure class=\"imgs\">\n        <!--<img src=\"https://chart.googleapis.com/chart?chs=400x225&cht=p&chco=007099&chd=t:793,54,57,306,68,7&chds=0,793&chdlp=b&chdl=total%201288%20kB&chl=Images+-+793+kB|HTML+-+54+kB|CSS+-+57+kB|Scripts+-+306+kB|Polices+-+68+kB|Autres+-+7+kB&chma=|5&chtt=Poids+moyen+en+ko+par+type+de+contenu+pour+le+mobile\" width=\"47%\" alt=\"Statistiques composition d'une page Web - mobile\" />\n        <img src=\"https://chart.googleapis.com/chart?chs=400x225&cht=p&chco=007099&chd=t:1460,67,77,367,123,193,4&chds=0,1460&chdlp=b&chdl=total%202299%20kB&chl=Images+-+1460+kB|HTML+-+67+kB|CSS+-+77+kB|Scripts+-+367+kB|Polices+-+123+kB|Vidéos+-+193+kB|Autres+-+4+kB&chma=|5&chtt=Poids+moyen+en+ko+par+type+de+contenu+/+bureau\" width=\"47%\" alt=\"Statistiques composition d'une page Web - bureau\" /> -->\n        <img src=\"/http2/img/chart-mobile.png\" width=\"47%\" alt=\"Statistiques composition d'une page Web - mobile\" />\n        <img src=\"/http2/img/chart-desktop.png\" width=\"47%\" alt=\"Statistiques composition d'une page Web - bureau\" />\n        <figcaption>Poids moyen d'une page Web - Mars 2016 (source: http://httparchive.org)</figcaption>\n    </figure>\n    <ul>\n        <li>Nos applications sont de plus en plus complexes !</li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "N'oublions pas nos utilisateurs !",
+        "html": "<article class=\"page peu\" id=\"page10\">\n    <header>\n        <h1>N'oublions pas nos utilisateurs !</h1>\n    </header>\n    <h2>Perception de vitesse</h2>\n    <ul>\n        <li>plus petit que 100ms, c'est instantané</li>\n        <li>plus petit que 300ms, c'est vite</li>\n        <li>1 seconde, j'ai peut-être vu un écureuil !</li>\n        <li>10 secondes, vous m'avez perdu</li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "Pour améliorer les performances avec HTTP 1.1",
+        "html": "<article class=\"page peu\" id=\"page11\">\n    <header>\n        <h1>Pour améliorer les performances avec HTTP 1.1</h1>\n    </header>\n    <ul>\n        <li>Exécuter plus d'une connexion en même temps... mais</li>\n        <li>Entre 6 et 8 connexions par domaine</li>\n    </ul>\n    <figure class=\"imgs\">\n        <img src=\"/http2/img/connexion-max-bureau.png\" width=\"40%\" alt=\"Maximum de connexions par domaine pour les navigateurs bureau\" />\n        <img src=\"/http2/img/connexion-max-mobile.png\" width=\"40%\" alt=\"Maximum de connexions par domaine pour les navigateurs mobile\" />\n        <figcaption>Maximum de connexions par domaine selon les navigateurs</figcaption>\n    </figure>\n\n</article>"
+      },
+      {
+        "title": "Pour améliorer les performances avec HTTP 1.1",
+        "html": "<article class=\"page peu \" id=\"page12\">\n    <header>\n        <h1>Pour améliorer les performances avec HTTP 1.1</h1>\n    </header>\n    <h2>Le domain sharding</h2>\n    <ul>\n        <li>Consiste à utiliser plusieurs sous-domaines pour outrepasser les limites de connexions par domaine</li>\n        <li>Coût de recherche DNS, \"handshake\" contrôle de connexion, TCP slow start</li>\n        <li>Parallèlise les connexions et accélère le téléchargement</li>\n        <li>Les abus peuvent causer de la congestion et de la retransmission - attention à la mobilité !</li>\n        <li>Utiliser un domaine sans cookie pour diminuer la grandeur des en-têtes http</li>\n\n    </ul>\n\n</article>"
+      },
+      {
+        "title": "Pour améliorer les performances avec HTTP 1.1",
+        "html": "<article class=\"page peu\" id=\"page13\">\n    <header>\n        <h1>Pour améliorer les performances avec HTTP 1.1</h1>\n    </header>\n    <h2>Le domain sharding</h2>\n\n    <figure class=\"imgs\">\n        <img src=\"/htpp2/img/no-sharding.svg\" width=\"40%\" style=\"vertical-align:text-top\"  alt=\"Illustration du maximum de connexion par domaine\" />\n        <img src=\"/http2/img/with-sharding.svg\" width=\"37%\" style=\"vertical-align:text-top\" alt=\"Illustration des avantages du sharding\" />\n        <figcaption>Exemple d'utilisation de la technique de domain sharding</figcaption>\n    </figure>\n</article>"
+      },
+      {
+        "title": "Pour améliorer les performances avec HTTP 1.1",
+        "html": "<article class=\"page peu\" id=\"page14\">\n    <header>\n        <h1>Pour améliorer les performances avec HTTP 1.1</h1>\n    </header>\n    <h2>Compression des données</h2>\n    <ul>\n        <li>Compresser les données avec GZIP est une bonne pratique bien connue</li>\n        <li>Les en-tête HTTP ne sont pas compressées</li>\n        <li>Problématique de sécurité (CRIME et BREACH) on ne peut compresser et chiffrer en même temps !</li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "Pour améliorer les performances avec HTTP 1.1",
+        "html": "<article class=\"page peu\" id=\"page15\">\n    <header>\n        <h1>Pour améliorer les performances avec HTTP 1.1</h1>\n    </header>\n    <h2>Fusionner plusieurs fichiers</h2>\n    <ul>\n        <li>Concaténer les fichiers CSS et Javascript</li>\n        <li>Inscrire directement les images, le Javascript et le CSS dans la page \"inlining\" </li>\n        <li>Utiliser des lutins \"sprites\" en CSS</li>\n        <li>Diminuer le nombre de requêtes, mais très mauvais pour les techniques de caching</li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "Pour améliorer les performances avec HTTP 1.1",
+        "html": "<article class=\"page\" id=\"page16\">\n    <header>\n        <h1>Pour améliorer les performances avec HTTP 1.1</h1>\n    </header>\n    <h2>Lutins</h2>\n    <figure class=\"imgs\">\n        <img src=\"/http2/img/flags.png\" width=\"40%\" style=\"vertical-align:text-top\"  alt=\"Drapeau en format lutin\" />\n        <figcaption>Exemple d'utilisation de la technique de lutins avec des drapeaux</figcaption>\n    </figure>\n\n</article>"
+      },
+      {
+        "title": "Autres bonnes pratiques",
+        "html": "<article class=\"page peu\" id=\"page17\">\n    <header>\n        <h1>Autres bonnes pratiques</h1>\n    </header>\n    <ul>\n        <li>Utiliser un CDN (pour diminuer la latence)</li>\n        <li>Minimisation de code</li>\n        <li>Limiter les méta données qui se répètent dans les en-têtes</li>\n        <li>Minimiser les redirections</li>\n        <li>Réutiliser les connexions TCP (Keep-alive)</li>\n        <li>Bien utiliser les techniques de caching client</li>\n        <li>Limiter le pre-téléchargement (balancer le pré-téléchargement et la congestion)</li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "Évolution de HTTP",
+        "html": "<article class=\"page peu\" id=\"page18\">\n    <header>\n        <h1>Évolution de HTTP</h1>\n    </header>\n    <ul>\n        <li>HTTP utilise plusieurs petites connexions rapidement</li>\n        <li>TCP a été conçu pour de longues connexions</li>\n        <li>Domain sharding, concaténation, inlining, les sprites sont des \"hacks\"</li>\n        <li>Le pipelining HTTP ne règle pas les problèmes</li>\n        <li>Il faut régler les problèmes du protocole</li>\n        <li>SPDY</li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "Les objectifs de HTTP/2",
+        "html": "<article class=\"page peu\" id=\"page19\">\n    <header>\n        <h1>Les objectifs de HTTP/2</h1>\n    </header>\n    <ul>\n        <li>Diminuer les problèmes causés par la latence</li>\n        <li>Régler le blocage en tête de file</li>\n        <li>Ne pas nécessiter plus d'une seule connexion</li>\n        <li>Garder la sémantique de HTTP 1.1 - Les fonctions du protocole sont un miroir un à un, on ne change pas les URL (reste http://)</li>\n        <li>Réduire la complexité du protocole</li>\n        <li>Pas de versions mineures</li>\n        <li>Minimiser les portions optionnelles</li>\n    </ul>\n</article>"
+      },
+      {
+        "title": "Ce qui change avec HTTP/2",
+        "html": "<article class=\"page peu\" id=\"page20\">\n    <header>\n        <h1>Ce qui change avec HTTP/2</h1>\n    </header>\n    <h2>Le protocole est maintenant binaire</h2>\n    <ul>\n        <li>Plus efficace et performant</li>\n        <li>Simplifie l'analyse syntaxique</li>\n        <li>Permet d'implémenter plus facilement les signaux multiplexes</li>\n    </ul>\n</article>"
+      }
+    ]
+  },
+  "intro-webvr": {
+    "name": "intro-webvr",
+    "description": "Introduction à WebVR",
+    "pages": [
+      {
+        "title": "Introduction à WebVR",
+        "html": "<article class=\"page\" id=\"page0\" style=\"overflow: hidden\">\n    <h1>Introduction à WebVR</h1>\n    <figure class=\"imgs\"  style=\"margin-top:0\">\n        <img width=\"70%\" src=\"/intro-webvr/img/dragon_by_desteny_love.png\" alt=\"Dragon\">\n    </figure>\n    <h2>Par <a rel=\"author\" href=\"/\">Benoit Piette</a></h2>\n</article>"
+      },
+      {
+        "title": "À propos de moi",
+        "html": "<article class=\"page peu\" id=\"page2\">\n    <header>\n        <h1>À propos de moi</h1>\n    </header>\n    <h2>Benoit Piette</h2>\n    <ul>\n        <li>Architecte de solution - à son compte - Résoeuvra inc.</li>\n        <li>Dévelopeur / analyste / architecte Web depuis 1996</li>\n        <li>Co-fondateur HTML5Mtl</li>\n    </ul>\n    <ul>\n        <li><a href=\"https://benoitpiette.com/\">https://benoitpiette.com</a></li>\n        <li><a href=\"https://twitter.com/benoitpiette\">https://twitter.com/benoitpiette</a></li>\n        <li><a href=\"https://www.linkedin.com/in/benoit-piette-5712aa6\">https://www.linkedin.com/in/benoit-piette-5712aa6</a></li>\n        <li>Les slides de la présentations sont disponibles sur <a href=\"https://benoitpiette.com/conferences/http2-2016/\">https://benoitpiette.com/conferences/http2-2016/</a></li>\n    </ul>\n</article>"
+      }
+    ]
+  }
+}

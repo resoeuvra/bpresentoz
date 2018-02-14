@@ -1,0 +1,16 @@
+<article class="page" id="page38">
+    <header>
+        <h1>Apache 2 et Ubuntu 15.10</h1>
+    </header>
+    <ul>
+        <li>Apache 2 inclus mod_http2 de 2.4.17 (nous sommes à 2.4.18 au moment d'écrire ces lignes)</li>
+        <li>Apache 2 2.4.17 sera inclus dans la prochaine version de Ubuntu 16.04 fin avril</li>
+        <li>Il existe un repo avec la dernière version de Apache (ppa:ondrej)</li>
+        <li><code>sudo add-apt-repository ppa:ondrej/apache2</code></li>
+        <li><code>sudo apt-get update</code></li>
+        <li><code>sudo apt-get install apache2</code></li>
+        <li><code>sudo a2enmod http2</code></li>
+        <li><code>sudo a2enmod ssl</code></li>
+        <li>Cette installation inclus tout ce qui est nécessaire</li>
+    </ul>
+</article>

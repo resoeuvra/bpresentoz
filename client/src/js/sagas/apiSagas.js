@@ -11,21 +11,19 @@ import {
   FETCH_PRESENTATION_LIST,
   FETCH_PRESENTATION_LIST_ERROR,
   FETCH_PRESENTATION_LIST_CANCEL,
+  START_PRESENTATION,
+  END_PRESENTATION,
 
 } from '../actions/presentationActions';
 import { call, put, cancelled } from 'redux-saga/effects';
 
 
 export function* watchFetchPresentation() {
-  console.log("je ne sais pas");
   yield takeEvery(REQUEST_PRESENTATION, fetchPresentation);
-  console.log("je devrais arriver ici");
 }
 
 export function* watchFetchPresentationList() {
-  console.log("je ne sais pas");
   yield takeEvery(REQUEST_PRESENTATION_LIST, fetchPresentationList);
-  console.log("je devrais arriver ici");
 }
 
 
@@ -33,11 +31,19 @@ export function* fetchPresentation(action) {
   try {
     yield put({ type: FETCH_PRESENTATION});
     const presentation = yield call(presentationApi.apiFetchPresentation, action.name);
-    console.log(presentation);
-    yield put({ type: RECEIVE_PRESENTATION, presentation });
+    yield put({ type: RECEIVE_PRESENTATION, presentation: presentation});
+    yield put({ type: START_PRESENTATION,
+      page: parseInt(action.page, 10),
+      step: action.step,
+      totalPages: presentation.pages.length,
+      name: presentation.name,
+      title: presentation.title,
+    });
+
   } catch (error) {
     console.log(error);
     yield put({ type: FETCH_PRESENTATION_ERROR, error});
+
   }
   finally {
     if (yield cancelled())
@@ -47,12 +53,11 @@ export function* fetchPresentation(action) {
 
 export function* fetchPresentationList() {
   try {
+    yield put({ type: END_PRESENTATION});
     yield put({ type: FETCH_PRESENTATION_LIST});
     const presentationList = yield call(presentationApi.apiFetchPresentationList);
-    console.log(presentationList);
     yield put({ type: RECEIVE_PRESENTATION_LIST, presentationList });
   } catch (error) {
-    console.log(error);
     yield put({ type: FETCH_PRESENTATION_LIST_ERROR, error});
   }
   finally {
