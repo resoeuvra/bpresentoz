@@ -3,7 +3,7 @@ const fs = require('fs');
 const cheerio = require('cheerio');
 
 const startPath = 'presentations';
-const path = walkSync(startPath, {globs: ['**/*.html']}) || [];
+const path = walkSync(startPath, {globs: ['**/*.html'], ignore: ['**/content/*']}) || [];
 
 let presentations = {};
 let presentationsMap = new Map();

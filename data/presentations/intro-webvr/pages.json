@@ -8,7 +8,107 @@
     },
     {
       "title": "À propos de moi",
-      "html": "<article class=\"page peu\" id=\"page2\">\n    <header>\n        <h1>À propos de moi</h1>\n    </header>\n    <h2>Benoit Piette</h2>\n    <ul>\n        <li>Architecte de solution - à son compte - Résoeuvra inc.</li>\n        <li>Dévelopeur / analyste / architecte Web depuis 1996</li>\n        <li>Co-fondateur HTML5Mtl</li>\n    </ul>\n    <ul>\n        <li><a href=\"https://benoitpiette.com/\">https://benoitpiette.com</a></li>\n        <li><a href=\"https://twitter.com/benoitpiette\">https://twitter.com/benoitpiette</a></li>\n        <li><a href=\"https://www.linkedin.com/in/benoit-piette-5712aa6\">https://www.linkedin.com/in/benoit-piette-5712aa6</a></li>\n        <li>Les slides de la présentations sont disponibles sur <a href=\"https://benoitpiette.com/conferences/http2-2016/\">https://benoitpiette.com/conferences/http2-2016/</a></li>\n    </ul>\n</article>"
+      "html": "<article class=\"page peu\" id=\"page2\">\n    <header>\n        <h1>À propos de moi</h1>\n    </header>\n    <h2>Benoit Piette</h2>\n    <ul>\n        <li>Architecte de solution - à son compte - Résoeuvra inc.</li>\n        <li>Dévelopeur / analyste / architecte Web depuis 1996</li>\n        <li>Co-fondateur HTML5Mtl</li>\n    </ul>\n    <ul>\n        <li><a href=\"https://benoitpiette.com/\">https://benoitpiette.com</a></li>\n        <li><a href=\"https://twitter.com/benoitpiette\">https://twitter.com/benoitpiette</a></li>\n        <li><a href=\"https://www.linkedin.com/in/benoit-piette-5712aa6\">https://www.linkedin.com/in/benoit-piette-5712aa6</a></li>\n        <li>Les slides de la présentations sont disponibles sur <a href=\"https://benoitpiette.com/conferences/webvr-2018/\">https://benoitpiette.com/conferences/webvr-2018/</a></li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Table des matières",
+      "html": "<article class=\"page peu\" id=\"page2\">\n    <header>\n        <h1>Table des matières</h1>\n    </header>\n    <ul>\n        <li>Pourquoi la réalité virtuelle sur le Web ?</li>\n        <li>Quelques concepts et pré-requis</li>\n        <li>Matériel et Logiciels disponibles sur le marché</li>\n        <li>WebVR: les standards et librairies</li>\n        <li>Créer du contenu 3D: Amazon Sumerian</li>\n        <li>Créer du contenu 3D: Vizor</li>\n        <li>Nos premiers pas en WebVR : A-Frame</li>\n        <li>Nos premiers pas en WebVR : ReactVR</li>\n        <li>Nos premiers pas en WebVR : Three.js</li>\n        <li>Autres standards: RequestAnimationFrame, Gamepad API et WebAudio</li>\n        <li>Un mot sur l'utilisabilité et l'accessibilité</li>\n        <li>Le futur : WebXR</li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Pourquoi la réalité virtuelle sur le Web ?",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Pourquoi la réalité virtuelle sur le Web ?</h1>\n    </header>\n    <figure style=\"float:right\">\n        <img src=\"/intro-webvr/img/viewmaster02.jpg\" alt=\"Image d'un ViewMaster\" >\n        <figcaption>Le ViewMaster a été créé en 1937 !</figcaption>\n    </figure>\n    <ul>\n        <li>Ubiquité des téléphones intelligent</li>\n        <li>Les technologies 3D et GPU évoluent rapidement</li>\n        <li>D'une technologie niche (gamers) vers occasionnelle</li>\n        <li>La réalité virtuelle existe depuis longtemps !</li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Quelques pré-requis et concepts: Comment truquer nos yeux ?",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Quelques pré-requis et concepts: <br>Comment truquer nos yeux ?</h1>\n    </header>\n    <p>L'image, le son, la sensation d'être dans un monde réel</p>\n    <p>Mouvement, position</p>\n    <p>Placeholder, image d'un grid</p>\n</article>"
+    },
+    {
+      "title": "Quelques pré-requis et concepts: Comment truquer nos yeux ?",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Quelques pré-requis et concepts: <br>Comment truquer nos yeux ?</h1>\n    </header>\n    <h2>Images stéréoscopiques</h2>\n    <figure class=\"figure-photo\">\n        <img src=\"/intro-webvr/img/stereoscopic_views.png\" alt=\"Image de la distance entre le centre de la pupille d'oeil à l'autre\">\n        <figcaption>Distance interpupilaire</figcaption>\n    </figure>\n</article>"
+    },
+    {
+      "title": "Quelques pré-requis et concepts: Comment truquer nos yeux ?",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Quelques pré-requis et concepts: <br>Comment truquer nos yeux ?</h1>\n    </header>\n    <h2>Images stéréoscopiques</h2>\n    <figure class=\"figure-photo\">\n        <img src=\"/intro-webvr/img/stereoscopic_views.png\" alt=\"Deux images stereoscopique représentant un batiment\">\n        <figcaption>Image stereoscopique</figcaption>\n    </figure>\n</article>"
+    },
+    {
+      "title": "Quelques pré-requis et concepts: Comment truquer nos sens ?",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Quelques pré-requis et concepts: Comment truquer nos sens ?</h1>\n    </header>\n    <h2>Suivi des mouvements / tracking</h2>\n    <p>Pour nous exposer un mode virtuel, le système de réalité virtuel doit capturer nos mouvement.</p>\n    <p>Particulièrement ceux de la tête</p>\n    <p>Les 6 degré de liberté:</p>\n    <ul>\n        <li>Translation: avancer / reculer, de haut en bas, de gauche à droite </li>\n        <li>Rotation: roulis (tête en diagonale), tangage (regarder de haut en bas), lacet (tourner la tête) </li>\n    </ul>\n    <p>Voir: <a href=\"https://fr.wikipedia.org/wiki/Degr%C3%A9_de_libert%C3%A9_(m%C3%A9canique)\">https://fr.wikipedia.org/wiki/Degr%C3%A9_de_libert%C3%A9_(m%C3%A9canique)</a></p>\n    <p>Placeholder image avec les 6 degre de liberte</p>\n</article>"
+    },
+    {
+      "title": "Quelques pré-requis et concepts: Comment truquer nos sens ?",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Quelques pré-requis et concepts: Comment truquer nos sens ?</h1>\n    </header>\n    <h2>Contrôles</h2>\n    <figure class=\"figure-photo\">\n        <img src=\"/intro-webvr/img/manette.jpg\" alt=\"Image d'une manette Atari\">\n    </figure>\n</article>"
+    },
+    {
+      "title": "Quelques pré-requis et concepts: Comment truquer nos sens ?",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Quelques pré-requis et concepts: Comment truquer nos sens ?</h1>\n    </header>\n    <h2>Heads Up Display</h2>\n    <p>Visualisation tête-haute, utilisée en aviation</p>\n    <figure class=\"figure-photo flottant\">\n        <img src=\"/intro-webvr/img/hud.jpg\" alt=\"HUD, utilisé en aviation\">\n    </figure>\n    <p>Interface utilisateur qui superpose le champ de vision</p>\n    <p class=\"copyright-cc-by-20\">Cette image a été originalement téléversée sur Flick par Telstar Logistic sous cc-by-2.0</p>\n</article>"
+    },
+    {
+      "title": "Quelques pré-requis et concepts: Comment truquer nos sens ?",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Quelques pré-requis et concepts: Comment truquer nos sens ?</h1>\n    </header>\n    <h2>Head Mounted Display / Visio Casque</h2>\n    <ul>\n        <li>Téléphone mobile / Google Cardboard</li>\n        <li>Playstation VR</li>\n    </ul>\n    <p>Interface utilisateur qui superpose le champ de vision</p>\n    <p class=\"copyright-cc-by-20\">Cette image a été originalement téléversée sur Flick par Telstar Logistic sous cc-by-2.0</p>\n</article>"
+    },
+    {
+      "title": "Quelques pré-requis et concepts: Comment truquer nos sens ?",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Quelques pré-requis et concepts: Comment truquer nos sens ?</h1>\n    </header>\n    <h2>À considérer</h2>\n    <ul>\n        <li>Champ de vision (en degré, haut, bas, gauche, droite) </li>\n        <li>Latence 20 ms, idéalement 5ms</li>\n        <li>Images par secondes, minimum 30fps, préférable 90fps </li>\n        <li>Mal des transports</li>\n        <li>Audio 3D</li>\n    </ul>\n    <p>Interface utilisateur qui superpose le champ de vision</p>\n    <p class=\"copyright-cc-by-20\">Cette image a été originalement téléversée sur Flick par Telstar Logistic sous cc-by-2.0</p>\n</article>"
+    },
+    {
+      "title": "Matériel et logiciel",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Matériel et logiciel</h1>\n    </header>\n    <ul>\n        <li>Mobile / Cardboard VR (Google Cardboard, Daydream)</li>\n        <li>Desktop / Console VR (HTC Vive, Playstation VR)</li>\n        <li>Standalone VR (Google Daydream)</li>\n        <li>Logiciels : SteamVR/OpenVR, Windows Mixed Reality </li>\n    </ul>\n    <figure class=\"figure-photo flottant deux-images\">\n        <img src=\"/intro-webvr/img/cardboard.jpg\" alt=\"VR Cardboard\">\n        <img src=\"/intro-webvr/img/vive.jpg\" alt=\"HTC Vive\">\n        <figcaption>Examples de matériel VR</figcaption>\n    </figure>\n</article>"
+    },
+    {
+      "title": "Matériel et logiciel",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Matériel et logiciel</h1>\n    </header>\n    <h2>Contrôleurs et entrée de données</h2>\n    <ul>\n        <li>Mannettes, accéléromêtres</li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Standards",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Standards</h1>\n    </header>\n\n    <figure class=\"figure-photo\">\n        <img src=\"/intro-webvr/img/intro-webvr.svg\" alt=\"Standards WebVR, WebGL, Web Audio, GamePad API, Librairies three.js, A-Frame et ReactVR\">\n        <figcaption>Standards et librairies associées à WebVR</figcaption>\n    </figure>\n</article>"
+    },
+    {
+      "title": "Système de coordonnées",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Système de coordonnées</h1>\n    </header>\n    <h2>Coordonnées main droite</h2>\n    <figure class=\"figure-photo\">\n        <img src=\"/intro-webvr/img/coord.svg\" alt=\"Systèmes de coordonnées main droite, le z pointe vers nous\">\n        <figcaption>Système de coordonnées</figcaption>\n    </figure>\n</article>"
+    },
+    {
+      "title": "Amazon Sumerian",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Amazon Sumerian</h1>\n    </header>\n    <figure class=\"figure-photo\">\n        <img src=\"/intro-webvr/img/sumerian.png\" alt=\"Interface utilisateur de Amazon Sumerian\">\n        <figcaption>Interface utilisateur de Amazone Sumerian, preview</figcaption>\n    </figure>\n</article>"
+    },
+    {
+      "title": "Amazon Sumerian",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Amazon Sumerian</h1>\n    </header>\n    <ul>\n        <li>Interface évoluée pour créer du contenu de réalité virtuelle</li>\n        <li>Système de publication sur AWS Cloudfront</li>\n        <li>Présentement en mode preview</li>\n        <li><a href=\"https://aws.amazon.com/fr/sumerian/\">https://aws.amazon.com/fr/sumerian/</a></li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Vizor",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Vizor</h1>\n    </header>\n    <figure class=\"figure-photo\">\n        <img src=\"/intro-webvr/img/vizor.png\" alt=\"Interface utilisateur de Vizor\">\n        <figcaption>Interface utilisateur de Vizor</figcaption>\n    </figure>\n</article>"
+    },
+    {
+      "title": "Vizor",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Vizor</h1>\n    </header>\n    <ul>\n        <li>Interface simplifiée pour créer du contenu de réalité virtuelle</li>\n        <li>On peut facilement importer une image panoramique</li>\n        <li>Système de publication</li>\n        <li>Possède une version gratuite</li>\n        <li>Code généré pour inclure dans des sites Web (génère des iframes)</li>\n        <li><a href=\"https://vizor.io\">https://vizor.io</a></li>\n    </ul>\n    <pre><code>\n        &lt;script src='//vizor.io/static/scripts/vizor-360-embed.js' data-vizorurl='//vizor.io/embed/benoitp/test1111'&gt;&lt;/script&gt;\n    </code></pre>\n</article>"
+    },
+    {
+      "title": "Exemple Vizor",
+      "html": "<article class=\"page\">\n    <header>\n        <h1>Exemple Vizor</h1>\n    </header>\n    <iframe src=\"/assets/content/vizor-test-iframe.html\" width=\"100%\" height=\"100%\"></iframe>\n</article>"
+    },
+    {
+      "title": "Example A-Frame - Panorama (Cheap)",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Example A-Frame - Panorama (Cheap)</h1>\n    </header>\n    <iframe src=\"/assets/content/aframe-iframe_1.html\" width=\"98%\" height=\"80%\"/>\n</article>"
+    },
+    {
+      "title": "À propos de A-Frame",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>À propos de A-Frame</h1>\n    </header>\n    <ul>\n        <li>Très simple à utiliser</li>\n        <li>Déclaratif, comme le HTML</li>\n        <li>Cross Platform: utilise des polyfills, dégradation progressive</li>\n        <li>Utilise le <a href=\"https://en.wikipedia.org/wiki/Entity_component_system\">Entity-Component System\" </a></li>\n        <li>Performance pouvant aller jusqu'a 90 FPS</li>\n        <li>Peut fonctionner avec n'importe quelle librairie (React, Vue, Angular JQuery)</li>\n        <li>Outils de débogage sont disponibles</li>\n        <li>Plusieurs composants, matériaux, etc. sont disponibles et libres</li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "A-frame: installation",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>A-frame: installation</h1>\n    </header>\n    <dl>\n        <dt>Simplement par un script</dt>\n        <dd><code>&lt;script src=\"https://aframe.io/aframe/dist/aframe-master.js\"&gt;&lt;/script&gt;</code></dd>\n        <dt>par npm</dt>\n        <dd><code>npm install aframe</code> et <code>npm install -g angle</code></dd>\n        <dd><i>angle</i> est un utilitaire de ligne de commande pour aframe</dd>\n    </dl>\n</article>"
+    },
+    {
+      "title": "Commençons à coder avec A-Frame",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Commençons à coder avec A-Frame</h1>\n    </header>\n    <ul>\n        <li>Utilisation d'un polyfill pour des <i>Custom Elements</i></li>\n        <li>Nouveaux éléments déclaratifs:</li>\n        <li>Comme: \n            <ul>\n                <li><code>&lt;a-box&gt; &lt;a-sphere&gt; &lt;a-sky&gt;</code></li>\n            </ul>\n        </li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Commençons à coder avec A-Frame",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Commençons à coder avec A-Frame</h1>\n    </header>\n    <h2>Entity - Component - System</h2>\n    <ul>\n        <li>L'entité est comme une coquille vide <code>&lt;a-entity&gt;</code></li>\n        <li>Ses attributs sont des composants (position, géométrie, lumières, matériaux)</li>\n        <li>Le tout à l'intérieur d'une scène (<code>&lt;a-scene&gt;</code>, dont les attributs représentent des systèmes (ex: collision, mouvement, caméra)</li>\n        <li><code>&lt;a-box&gt; &lt;a-sphere&gt; &lt;a-sky&gt;</code> sont des entités avec composants pré-emballés</li>\n        <li>Pour en savoir plus sur <i><a href=\"https://gamedev.stackexchange.com/questions/31473/what-is-the-role-of-systems-in-a-component-based-entity-architecture\">Entity Component System</a></i></li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Merci !",
+      "html": "<article class=\"page peu\" id=\"page50\" style=\"background-color:#fff\">\n    <header>\n        <h1>Merci !</h1>\n    </header>\n    <figure class=\"imgs\">\n        <img width=\"50%\" src=\"/http2/img/resoeuvra-logo.png\" alt=\"Logo Résoeuvra\">\n    </figure>\n</article>"
     }
   ]
 }

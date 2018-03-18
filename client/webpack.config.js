@@ -31,7 +31,7 @@ function getPlugins() {
 module.exports = [{
 
     // https://webpack.js.org/configuration/devtool/
-    devtool: IS_PROD_BUILD ? false : "inline-source-map",
+    devtool: "inline-source-map",
 
     resolve: {
         extensions: [".js", ".json", "jsx", "ts", "tsx"]
