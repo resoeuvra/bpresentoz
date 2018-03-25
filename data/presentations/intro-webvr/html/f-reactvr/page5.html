@@ -1,0 +1,28 @@
+<article class="page peu">
+    <header>
+        <h1>Exemple ReactVR</h1>
+    </header>
+<code>
+    <pre>
+export default class reactTest extends React.Component {
+  render() {
+    return (
+      &lt;View&gt;
+        &lt;Pano source={asset('darkbureau.png')}/&gt;
+        &lt;Text
+          style={{
+            backgroundColor: '#000',
+            fontSize: 1,
+            fontWeight: '300',
+            transform: [{translate: [0, 0, -5]}],
+          }}&gt;
+          Station de travail
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    );
+  }
+};
+
+    </pre>
+</code>
+</article>

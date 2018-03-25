@@ -1,0 +1,27 @@
+<article class="page" id="page2">
+    <header>
+        <h1>WebGL</h1>
+    </header>
+    <ul>
+        <li>Élément canvas avec Context 3D</li>
+        <li>canvas.getContext("webgl") || canvas.getContext("experimental-webgl")</li>
+        <li>WebGL, c'est sensiblement le standard OpenGL ES, Open GL pour systèmes embarqués (téléphones, tablettes), mais pour le Web</li>
+        <li>Vous comprenez que nous n'apprendrons pas OpenGL... aujourd'hui. (Plusieurs semaines de cours)</li>
+    </ul>
+    <figure><code>
+        &lt;canvas id="canvas3d" width="800" height="560"&gt;
+        Votre navigateur ne semble pas prendre en charge
+        l'élément canvas.
+        &lt;/canvas&gt;
+    </code></figure>
+    <figure><code>
+        function initWebGL(canvas) {
+        try {
+        // Acquérir le context 3D de canvas ou la version expérimentale
+        gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+        } catch(e) {
+        console.log("Impossible d'aquérir le contexte canvas 3D");
+        }
+        }
+    </code></figure>
+</article>

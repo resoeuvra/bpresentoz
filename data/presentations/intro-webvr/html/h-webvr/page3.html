@@ -1,0 +1,20 @@
+<article class="page peu">
+    <header>
+        <h1>WebVR, le standard</h1>
+    </header>
+    <h2>Éléments d'une application WebVR</h2>
+    <ul>
+        <li>VRFrameData: Contient les données sur le frame à afficher à l'écran</li>
+        <li>window.requestAnimationFrame vs VRDisplay.requestAnimationFrame, boucles de rendering</li>
+        <li>VRPose: Contient les informations sur la position et l'orientation de l'appareil VR</li>
+        <li>Pour chaque oeil, nous créeons un frame dans un canvas WebGL, selon la position et l'orientation de l'oeil</li>
+        <li>Puis la frame est envoyée à l'écran</li>
+    </ul>
+    <code>
+        <pre>
+navigator.getVRDisplays().then(function(displays) {
+  // Utiliser l'écran de réalité virtuelle
+});
+        </pre>
+    </code>
+</article>
