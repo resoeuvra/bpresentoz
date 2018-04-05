@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { bindActionCreators } from 'redux';
-import Page from '../containers/Page';
+import {Page, VRPage} from '../containers/Page';
 import ToolsContainer from '../containers/ToolsContainer';
 import PresentationsHome from '../containers/PresentationsHome';
+import {MODES} from '../actions/presentationActions';
 
 
 class App extends React.Component {
@@ -12,7 +12,7 @@ class App extends React.Component {
     if (!isPresentationActive) {
       return <div><PresentationsHome /></div>
     } else {
-      return <div><Page /><ToolsContainer /></div>
+      return (this.props.presentationMode === MODES.VR) ? <div><VRPage /></div> : <div><Page /><ToolsContainer /></div>
     }
   }
 }
@@ -20,7 +20,8 @@ class App extends React.Component {
 const mapStateToProps = state => {
   // switch between the type of page and the type of component
   return {
-    presentationActive: state.ui.active
+    presentationActive: state.ui.active,
+    presentationMode: state.ui.mode
   }
 };
 

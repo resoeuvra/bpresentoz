@@ -10,6 +10,8 @@ import {
   RECEIVE_PRESENTATION_LIST,
   FETCH_PRESENTATION_LIST_ERROR,
   FETCH_PRESENTATION_LIST_CANCEL,
+  MASTER_SLAVE,
+  SET_SLAVE_MASTER,
 } from '../actions/presentationActions';
 
 const initialState = {
@@ -18,6 +20,7 @@ const initialState = {
   presentationList:null,
   isFetchingPresentation: false,
   isFetchingPresentationList: false,
+  masterSlave: MASTER_SLAVE.NONE,
   error: null,
 };
 
@@ -63,6 +66,10 @@ function presentationAppData(state = initialState, action) {
       return Object.assign({}, state, {
         isFetchingPresentationList: false
       });
+      case SET_SLAVE_MASTER:
+        return Object.assign({}, state, {
+          masterSlave: action.masterSlave
+        });
     default:
       return Object.assign({}, state);
   }

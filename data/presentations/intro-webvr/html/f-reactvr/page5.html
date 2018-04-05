@@ -1,28 +1,11 @@
 <article class="page peu">
     <header>
-        <h1>Exemple ReactVR</h1>
+        <h1>Deployer ReactVR</h1>
     </header>
-<code>
-    <pre>
-export default class reactTest extends React.Component {
-  render() {
-    return (
-      &lt;View&gt;
-        &lt;Pano source={asset('darkbureau.png')}/&gt;
-        &lt;Text
-          style={{
-            backgroundColor: '#000',
-            fontSize: 1,
-            fontWeight: '300',
-            transform: [{translate: [0, 0, -5]}],
-          }}&gt;
-          Station de travail
-        &lt;/Text&gt;
-      &lt;/View&gt;
-    );
-  }
-};
-
-    </pre>
-</code>
+    <ul>
+        <li><code>npm run build</code>: Transpiler l'application</li>
+        <li>Dans le répertoire /vr/build, nous aurons les assets et le javascript</li>
+        <li>Suffit de mettre sur un serveur Web statique</li>
+        <li>Nous devons modifier les liens vers le javascript si nous avons besoin de le déplacer ou le mettre sur un CDN</li>
+    </ul>
 </article>

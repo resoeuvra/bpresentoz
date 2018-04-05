@@ -48,7 +48,7 @@
     },
     {
       "title": "Quelques pré-requis et concepts: Comment truquer nos sens ?",
-      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Quelques pré-requis et concepts: Comment truquer nos sens ?</h1>\n    </header>\n    <h2>À considérer</h2>\n    <ul>\n        <li>Champ de vision (en degré, haut, bas, gauche, droite) </li>\n        <li>Latence 20 ms, idéalement 5ms</li>\n        <li>Images par secondes, minimum 30fps, préférable 90fps </li>\n        <li>Mal des transports</li>\n        <li>Audio 3D</li>\n    </ul>\n    <p>Interface utilisateur qui superpose le champ de vision</p>\n    <p class=\"copyright-cc-by-20\">Cette image a été originalement téléversée sur Flick par Telstar Logistic sous cc-by-2.0</p>\n</article>"
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Quelques pré-requis et concepts: Comment truquer nos sens ?</h1>\n    </header>\n    <h2>À considérer</h2>\n    <ul>\n        <li>Champ de vision (en degré, haut, bas, gauche, droite) (une pyramide tronquée - tronc de cône / <i>frustrum</i>)</li>\n        <li>Latence 20 ms, idéalement 5ms</li>\n        <li>Images par secondes, minimum 30fps, préférable 90fps </li>\n        <li>Mal des transports</li>\n        <li>Audio 3D</li>\n    </ul>\n    <p>Interface utilisateur qui superpose le champ de vision</p>\n    <p class=\"copyright-cc-by-20\">Cette image a été originalement téléversée sur Flick par Telstar Logistic sous cc-by-2.0</p>\n</article>"
     },
     {
       "title": "Matériel et logiciel",
@@ -91,6 +91,10 @@
       "html": "<article class=\"page peu\">\n    <header>\n        <h1>Example A-Frame - Panorama (Cheap)</h1>\n    </header>\n    <iframe src=\"/assets/content/aframe-iframe_1.html\" width=\"98%\" height=\"80%\"/>\n</article>"
     },
     {
+      "title": "Commençons à coder avec A-Frame",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Commençons à coder avec A-Frame</h1>\n    </header>\n<code>\n    <pre>\n\n&lt;a-scene&gt;\n\n    &lt;a-assets&gt;\n        &lt;img id=\"texture\" src=\"/intro-webvr/img/darkbureau.png\"&gt;\n    &lt;/a-assets&gt;\n\n    &lt;a-sky src=\"#texture\"&gt;&lt;/a-sky&gt;\n&lt;/a-scene&gt;\n\n    </pre>\n</code>\n\n</article>"
+    },
+    {
       "title": "À propos de A-Frame",
       "html": "<article class=\"page peu\">\n    <header>\n        <h1>À propos de A-Frame</h1>\n    </header>\n    <ul>\n        <li>Très simple à utiliser</li>\n        <li>Déclaratif, comme le HTML</li>\n        <li>Cross Platform: utilise des polyfills, dégradation progressive</li>\n        <li>Utilise le <a href=\"https://en.wikipedia.org/wiki/Entity_component_system\">Entity-Component System\" </a></li>\n        <li>Performance pouvant aller jusqu'a 90 FPS</li>\n        <li>Peut fonctionner avec n'importe quelle librairie (React, Vue, Angular JQuery)</li>\n        <li>Outils de débogage sont disponibles</li>\n        <li>Plusieurs composants, matériaux, etc. sont disponibles et libres</li>\n    </ul>\n</article>"
     },
@@ -100,15 +104,127 @@
     },
     {
       "title": "Commençons à coder avec A-Frame",
-      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Commençons à coder avec A-Frame</h1>\n    </header>\n    <ul>\n        <li>Utilisation d'un polyfill pour des <i>Custom Elements</i></li>\n        <li>Nouveaux éléments déclaratifs:</li>\n        <li>Comme: \n            <ul>\n                <li><code>&lt;a-box&gt; &lt;a-sphere&gt; &lt;a-sky&gt;</code></li>\n            </ul>\n        </li>\n    </ul>\n</article>"
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Commençons à coder avec A-Frame</h1>\n    </header>\n    <ul>\n        <li>Utilisation d'un polyfill pour des <i>Custom Elements</i></li>\n        <li>Nouveaux éléments déclaratifs:</li>\n        <li>Comme:\n            <ul>\n                <li><code>&lt;a-box&gt; &lt;a-sphere&gt; &lt;a-sky&gt;</code></li>\n            </ul>\n        </li>\n    </ul>\n</article>"
     },
     {
       "title": "Commençons à coder avec A-Frame",
-      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Commençons à coder avec A-Frame</h1>\n    </header>\n    <h2>Entity - Component - System</h2>\n    <ul>\n        <li>L'entité est comme une coquille vide <code>&lt;a-entity&gt;</code></li>\n        <li>Ses attributs sont des composants (position, géométrie, lumières, matériaux)</li>\n        <li>Le tout à l'intérieur d'une scène (<code>&lt;a-scene&gt;</code>, dont les attributs représentent des systèmes (ex: collision, mouvement, caméra)</li>\n        <li><code>&lt;a-box&gt; &lt;a-sphere&gt; &lt;a-sky&gt;</code> sont des entités avec composants pré-emballés</li>\n        <li>Pour en savoir plus sur <i><a href=\"https://gamedev.stackexchange.com/questions/31473/what-is-the-role-of-systems-in-a-component-based-entity-architecture\">Entity Component System</a></i></li>\n    </ul>\n</article>"
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Commençons à coder avec A-Frame</h1>\n    </header>\n    <h2>Entity - Component - System</h2>\n    <ul>\n        <li>L'entité est comme une coquille vide <code>&lt;a-entity&gt;</code></li>\n        <li>Ses attributs sont des composants (position, géométrie, lumières, matériaux)</li>\n        <li>Le tout à l'intérieur d'une scène (<code>&lt;a-scene&gt;</code>, dont les attributs représentent des systèmes (ex: collision, mouvement)</li>\n        <li>Les composants contiennent les données, les systèmes la logique</li>\n        <li><code>&lt;a-box&gt; &lt;a-sphere&gt; &lt;a-sky&gt;</code> sont des entités avec composants pré-emballés</li>\n        <li>Pour en savoir plus sur <i><a href=\"https://gamedev.stackexchange.com/questions/31473/what-is-the-role-of-systems-in-a-component-based-entity-architecture\">Entity Component System</a></i></li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Commençons à coder avec A-Frame",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Commençons à coder avec A-Frame</h1>\n    </header>\n    <h2>Syntaxe</h2>\n    <pre><code>\n        &lt;a-entity nomDuComposant=\"nomDeLaPropriete1: valeurPropriete; ${nomDeLaPropriete1}: ${valeurPropriete}\"&gt;\n    </code></pre>\n\n</article>"
+    },
+    {
+      "title": "Commençons à coder avec A-Frame",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Commençons à coder avec A-Frame</h1>\n    </header>\n    <h2>Réutilisation du DOM</h2>\n    <ul>\n        <li>Queryselector (filtrer, référencer)</li>\n        <li>Gestion d'évènements (création, emition, écoute)</li>\n        <li>Création, destruction éléments du DOM</li>\n    </ul>\n\n</article>"
+    },
+    {
+      "title": "Commençons à coder avec A-Frame",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Commençons à coder avec A-Frame</h1>\n    </header>\n    <h2>Capacité d'extension</h2>\n    <ul>\n        <li>Création de composants et de systèmes)</li>\n        <li>Composition de composants / Higher order (Un composant peut appliquer un autre composant à une entité)</li>\n        <li>Registre de composants:\n            <ul>\n                <li><a href=\"https://aframe.io/aframe-registry\">Registre A-Frame</a>, angle, github, <a href=\"https://www.npmjs.com/search?q=aframe-component\">npm</a></li>\n                <li>Disponibles sur le cdn unpkg</li>\n            </ul>\n        </li>\n    </ul>\n\n</article>"
+    },
+    {
+      "title": "Commençons à coder avec A-Frame",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Commençons à coder avec A-Frame</h1>\n    </header>\n<h2>Assets</h2>\n    <ul>\n        <li><code>assets</code>: modèles, images, sons, données, qui sont utilisés dans une scène</li>\n        <li>Ils sont définis par la balise <code>assets</code>, puis référencés dans les entités par le composant src.</li>\n    </ul>\n\n</article>"
+    },
+    {
+      "title": "À propos de ReactVR",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>À propos de ReactVR</h1>\n    </header>\n    <ul>\n        <li>Réutilise les concept de React et React Native (déclaratif, composants, props, state)</li>\n        <li>Ressemble plus à React Native que React (problèmes similaires)</li>\n        <li>Basé sur OVRUI, Three.js, WebGL et WebVR</li>\n        <li>Comme React, permet d'utiliser des outils de développement (hot reloading)</li>\n        <li>OVRUI, Oculus VR User Interface, simplifie l'utilisation three.js entre ReactVR et three.js/li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Composants ReactVR",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Composants ReactVR</h1>\n    </header>\n    <ul>\n        <li><code>View</code>: Un peu comme <code>div</code>, hérité de React Native</li>\n        <li><code>Image</code>: Comme <code>img</code>, hérité de React Native</li>\n        <li><code>Text</code>: Comme <code>p</code>, hérité de React Native</li>\n        <li><code>Pano</code>: Permet l'affichage d'un panorama, un peu comme <code>a-sky</code> de a-frame</li>\n        <li><code>VRButton</code>: Permet d'intéragir avec la scène 3D</li>\n        <li><code>AppRegistry.registerComponent</code>: Enregistrement du composant root. Initialiser une appplication ReactVR est comme React Native et non juste React. </li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Débuter avec ReactVR",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Débuter avec ReactVR</h1>\n    </header>\n\n    <ul>\n        <li><code>npm install -g react-vr-cli</code>: Installer l'outil de ligne de commande react vr</li>\n        <li><code>react-vr init VotreProjet</code>: Initialiser votre projet</li>\n        <li><code>npm install --save webvr-polyfill</code>: Pour ne pas oublier Safari</li>\n        <li>Modifier le fichier client.js pour ajouter le polyfill</li>\n        <li>Dans le répertoire <code>npm start</code>: Permet d'intéragir avec la scène 3D</li>\n        <li><code>AppRegistry.registerComponent</code>: Enregistrement du composant root. Initialiser une appplication ReactVR est comme React Native et non juste React. </li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Exemple ReactVR",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Exemple ReactVR</h1>\n    </header>\n<code>\n    <pre>\nexport default class reactTest extends React.Component {\n  render() {\n    return (\n      &lt;View&gt;\n        &lt;Pano source={asset('darkbureau.png')}/&gt;\n        &lt;Text\n          style={{\n            backgroundColor: '#000',\n            fontSize: 1,\n            fontWeight: '300',\n            transform: [{translate: [0, 0, -5]}],\n          }}&gt;\n          Station de travail\n        &lt;/Text&gt;\n      &lt;/View&gt;\n    );\n  }\n};\n\n    </pre>\n</code>\n</article>"
+    },
+    {
+      "title": "Deployer ReactVR",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Deployer ReactVR</h1>\n    </header>\n    <ul>\n        <li><code>npm run build</code>: Transpiler l'application</li>\n        <li>Dans le répertoire /vr/build, nous aurons les assets et le javascript</li>\n        <li>Suffit de mettre sur un serveur Web statique</li>\n        <li>Nous devons modifier les liens vers le javascript si nous avons besoin de le déplacer ou le mettre sur un CDN</li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "À propos de three.js",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>À propos de three.js</h1>\n    </header>\n    <h2><a href=\"http://threejs.org\">threejs.org</a></h2>\n    <ul>\n        <li>Librairie JavaScript 3D</li>\n        <li>Utilise WebGL, mais aussi Canvas 2D, SVG, CSS3D / DOM</li>\n        <li>Permet l'utilisation de caméras, géométrie, Modèles 3D, Matériaux, etc.</li>\n        <li>Comprends des utilitaires pour effectuer les mathématiques </li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Example three.js - Cuber",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Example three.js - Cuber</h1>\n    </header>\n    <p>Référence: http://davidscottlyons.com/threejs-intro/</p>\n    <iframe src=\"/assets/content/threejs-logo.html\" width=\"98%\" height=\"80%\"/>\n</article>"
+    },
+    {
+      "title": "Exemple Three.js",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Exemple Three.js</h1>\n    </header>\n<code>\n    <pre>\n&lt;script src=\"https://cdnjs.cloudflare.com/ajax/libs/three.js/91/three.min.js\"&gt;&lt;/script&gt;\n&lt;script&gt;\n    var scene = new THREE.Scene();\n    var aspect = window.innerWidth / window.innerHeight;\n    var camera = new THREE.PerspectiveCamera( 75, aspect, 0.1, 1000 );\n    var renderer = new THREE.WebGLRenderer();\n    renderer.setSize( window.innerWidth, window.innerHeight );\n    document.body.appendChild( renderer.domElement );\n\n    var geometry = new THREE.BoxGeometry( 2, 2, 2 );\n    var texture = new THREE.TextureLoader().load( 'resoeuvra-logo256r.png' );\n    var material = new THREE.MeshBasicMaterial( { map: texture });\n    var cube = new THREE.Mesh( geometry, material );\n    scene.add( cube );\n    camera.position.z = 5;\n\n    var render = function () {\n        requestAnimationFrame( render );\n        cube.rotation.x += 0.01;\n        cube.rotation.y += 0.01;\n        renderer.render( scene, camera );\n    };\n\n    render();\n&lt;/script&gt;\n\n\n    </pre>\n</code>\n</article>"
+    },
+    {
+      "title": "WebVR, le standard",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>WebVR, le standard</h1>\n    </header>\n    <ul>\n        <li>Juste un mot, la spécification WebVR est déjà <i>depecrated</i> et remplacée par WebXR Device API</li>\n        <li>Cette spécification prend en charge les contrôles des appareils </li>\n    </ul>\n    <code>\n        <pre>\nnavigator.getVRDisplays().then(function(displays) {\n  // Utiliser l'écran de réalité virtuelle\n});\n        </pre>\n    </code>\n</article>"
+    },
+    {
+      "title": "WebVR, le standard",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>WebVR, le standard</h1>\n    </header>\n    <h2>Éléments d'une application WebVR</h2>\n    <ul>\n        <li>VRFrameData: Contient les données sur le frame à afficher à l'écran</li>\n        <li>window.requestAnimationFrame vs VRDisplay.requestAnimationFrame, boucles de rendering</li>\n        <li>VRPose: Contient les informations sur la position et l'orientation de l'appareil VR</li>\n        <li>Pour chaque oeil, nous créeons un frame dans un canvas WebGL, selon la position et l'orientation de l'oeil</li>\n        <li>Puis la frame est envoyée à l'écran</li>\n        <li>Événements WebVR (connexion, déconnexion de l'appareil)</li>\n        <li>Fonctions pour commencer et terminer l'utilisation de l'appareil</li>\n    </ul>\n    <code>\n        <pre>\nnavigator.getVRDisplays().then(function(displays) {\n  // Utiliser l'écran de réalité virtuelle\n});\n        </pre>\n    </code>\n</article>"
+    },
+    {
+      "title": "WebVR, le standard",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>WebVR, le standard</h1>\n    </header>\n    <h2>Contrôles et extensions au GamePad API</h2>\n    <ul>\n        <li>GamepadHapticActuator: permet d'envoyer un feedback à l'utilisateur (ex: vibrations)</li>\n        <li><code>gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { ... });</code></li>\n        <li>GamepadPose: position, orientation, vitesse et accélération du contrôleur dans l'espace 3D</li>\n        <li>(juste sur Firefox pour le moment / avril 2018)</li>\n        <li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions\">Documentation sur MDN</a></li>\n    </ul>\n    <code>\n        <pre>\nnavigator.getVRDisplays().then(function(displays) {\n  // Utiliser l'écran de réalité virtuelle\n});\n        </pre>\n    </code>\n</article>"
+    },
+    {
+      "title": "WebGL",
+      "html": "<article class=\"page\" id=\"page2\">\n    <header>\n        <h1>WebGL</h1>\n    </header>\n    <ul>\n        <li>Élément canvas avec Context 3D</li>\n        <li>canvas.getContext(\"webgl\") || canvas.getContext(\"experimental-webgl\")</li>\n        <li>WebGL, c'est sensiblement le standard OpenGL ES, Open GL pour systèmes embarqués (téléphones, tablettes), mais pour le Web</li>\n        <li>Vous comprenez que nous n'apprendrons pas OpenGL... aujourd'hui. (Plusieurs semaines de cours)</li>\n    </ul>\n    <figure><code>\n        &lt;canvas id=\"canvas3d\" width=\"800\" height=\"560\"&gt;\n        Votre navigateur ne semble pas prendre en charge\n        l'élément canvas.\n        &lt;/canvas&gt;\n    </code></figure>\n    <figure><code>\n        function initWebGL(canvas) {\n        try {\n        // Acquérir le context 3D de canvas ou la version expérimentale\n        gl = canvas.getContext(\"webgl\") || canvas.getContext(\"experimental-webgl\");\n        } catch(e) {\n        console.log(\"Impossible d'aquérir le contexte canvas 3D\");\n        }\n        }\n    </code></figure>\n</article>"
+    },
+    {
+      "title": "WebGL (2)",
+      "html": "<article class=\"page\" id=\"page3\" data-caniuse=\"WebGL\">\n    <header>\n        <h1>WebGL (2)</h1>\n    </header>\n    <dl>\n        <dt>Buffers</dt>\n        <dd>Des mémoires tampons contiennent l'information sur les objets à dessiner</dd>\n        <dt>Shaders (<a hreflang=\"en\" href=\"http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf\" lang=\"en\">OpenGL ES Shading Language</a>)</dt>\n        <dd>Langage servant à donner des instructions de rendu à la carte graphique (éclairage, couleurs, etc). Fragment Shader : chaque pixel est un fragment. Vertex Shader : défini la position d'un vecteur.</dd>\n        <dt><a href=\"http://sylvester.jcoglan.com/\">Sylverter.js</a></dt>\n        <dd>Librairie JavaScript simplifiant les calculs avec matrice.</dd>\n        <dt>Tutorials</dt>\n        <dd><a hreflang=\"en\" href=\"https://developer.mozilla.org/en/WebGL/Getting_started_with_WebGL\">Tutorial WebGL chez Mozilla</a></dd>\n        <dd><a hreflang=\"en\" href=\"http://learningwebgl.com/blog/?p=28\" lang=\"en\">Learning WebGL</a></dd>\n        <dt><a hreflang=\"en\"href=\"http://scenejs.org/\">SceneJS</a></dt>\n        <dd>Moteur 3D open source <abbr>API</abbr> basé sur <abbr>JSON</abbr> et <abbr>WebGL</abbr></dd>\n    </dl>\n    <p>Appliquer les buffers et shaders on contexte 3D WebGL, faire les divers calculs et gérer les événements en Javascript</p>\n</article>"
+    },
+    {
+      "title": "Exemple WebGL",
+      "html": "<article class=\"page\" id=\"page4\">\n    <header>\n        <h1>Exemple WebGL</h1>\n    </header>\n    <p>Exemple basé sur <a href=\"https://developer.mozilla.org/en/WebGL/Getting_started_with_WebGL\">https://developer.mozilla.org/en/WebGL/Getting_started_with_WebGL</a></p>\n    <iframe src=\"/assets/content/webgl/logoquitourne.html\" width=\"98%\" height=\"80%\"/>\n</article>"
+    },
+    {
+      "title": "Polyfills, GamePad API et Accéléromètre",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Polyfills, GamePad API et Accéléromètre</h1>\n    </header>\n    <ul>\n        <li>Les polyfills utilisent l'accéléromètre pour implémenter l'API de WebVR pour les téléphones mobiles</li>\n        <li>Configuration pour optimiser la performance</li>\n        <li>CardBoardVRDisplay défini les capacités du téléphone mobile</li>\n        <li><a href=\"https://github.com/immersive-web/webvr-polyfill\">https://github.com/immersive-web/webvr-polyfill</a></li>\n        <li>Il faut utiliser les outils de base (three.js, GamePad API) ou des librairies plus haut niveau comme a-frame pour offrir une expérience desktop</li>\n        <li>Utiliser en combinaison avec aframe ou react-vr</li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Audio positionel cinématographique 3D",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Audio positionel cinématographique 3D</h1>\n    </header>\n    <!-- traduire et ajouter l'èimage -->\n    <ul>\n        <li>Extensions à l'API WebAudio</li>\n        <li><code>AudioListener</code>: Représente la position de l'auditeur dans l'espace 3D</li>\n        <li><code>PannerNode</code>: Représente la position, le mouvement et l'orientation de la source sonore</li>\n        <li><a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics\">Documentation MDN</a></li>\n        <li>Exemple d'audio positionnel: <a href=\"https://mdn.github.io/webaudio-examples/panner-node/\">Room of Metal</a></li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "OpenVR",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>OpenVR</h1>\n    </header>\n    <ul>\n        <li>OpenVR est une API et un runtime qui permettent d'accéder aux capacités du matériel VR par une couche d'abstraction </li>\n        <li>L'implémentation la plus connue est SteamVR</li>\n        <li>Firefox utilise SteamVR pour communiquer avec l'appareil VR (ex: HTC Vive)</li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "WebVR et accessibilité",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>WebVR et accessibilité</h1>\n    </header>\n    <ul>\n        <li>Description de la scène</li>\n        <li>Son ambiophonique</li>\n        <li>Contrôles alternatif (clavier, braille), navigation</li>\n        <li>Simulation d'un handicap en réalité virtuelle</li>\n        <li>Guérison de certain trouble en utilisant la réalité virtuelle</li>\n        <li>WCAG continue de s'appliquer (contraste, contenu alternatif, etc.)</li>\n        <li>Voir comme une opportunité de créer de nouvelles interfaces plus accessibles</li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Futur: WebXR",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Futur: WebXR</h1>\n    </header>\n    <ul>\n        <li>Inclut réalité augmentée AR</li>\n        <li>Objectif : Réduire les problèmes de compatibilité des matériels + meilleur UX</li>\n        <li>Permet l'amélioration progressive sans avoir à utiliser des techniques externes </li>\n        <li>Permet l'utilisation standardadisé d</li>\n        <li>Intégration simple à une page Web (comme vidéo ou audio HTML5</li>\n        <li>Meilleur support pour vidéo</li>\n        <li>Session VR ou AR</li>\n        <li>Layers (réalité, HUDs, etc.)</li>\n        <li>Web Assembly ?</li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Évolution",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Évolution</h1>\n    </header>\n<!-- creation de contenu -->\n    <!-- développement -->\n    <!-- matériel -->\n    <!-- application médicale, simulation, jeux Web navigation-->\n\n    <ul>\n        <li>Environnements de développement du type Unity</li>\n        <li>Applications en médecine et en simlation</li>\n        <li>Encore de la miniaturisation</li>\n        <li>Jeux vidéos, évidemment, éventuellement monsieur madame tout le monde. </li>\n        <li>Est-ce que des lunettes pourraient remplacer les téléphones portables ?</li>\n    </ul>\n</article>"
     },
     {
       "title": "Merci !",
       "html": "<article class=\"page peu\" id=\"page50\" style=\"background-color:#fff\">\n    <header>\n        <h1>Merci !</h1>\n    </header>\n    <figure class=\"imgs\">\n        <img width=\"50%\" src=\"/http2/img/resoeuvra-logo.png\" alt=\"Logo Résoeuvra\">\n    </figure>\n</article>"
+    },
+    {
+      "title": "Références - Concepts et présentations",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Références - Concepts et présentations</h1>\n    </header>\n    <ul>\n        <li><a href=\"https://docs.google.com/presentation/d/1RdleOEpi3U0OUS6idji8vDzYhljF9ZonQ5s2BpBSktA/edit#slide=id.g196a15bc9e_2_123\">Présentation WebXR</a></li>\n        <li><a href=\"http://smus.com/responsive-vr/\">Responsive VR</a></li>\n        <li><a href=\"https://medium.com/coding-artist/learn-react-vr-chapter-1-hello-virtual-world-202241c0cb63\">Excellent tutorial pour ReactVR</a></li>\n        <li><a href=\"https://wiki.panotools.org/Panorama_formats\">Type d'images panoramique</a></li>\n        <li><a href=\"https://www.fourkitchens.com/blog/development/react-vr-early-look-facebooks-foray-vr/\">Excellent article sur ReactVR</a></li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Références - Création de contenu",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Références - Création de contenu</h1>\n    </header>\n    <ul>\n        <li><a href=\"https://aws.amazon.com/sumerian/\">Amazon Sumerian</a></li>\n        <li><a href=\"https://vizor.io\">Vizor</a></li>\n        <li><a href=\"https://playcanvas.com/\">PlayCanvas</a></li>\n        <li><a href=\"https://sketchfab.com/\">Sketchfab</a></li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Références - Outils de développements et runtimes",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Références - Outils de développements et runtimes</h1>\n    </header>\n    <ul>\n        <li><a href=\"https://github.com/ValveSoftware/openvr\">OpenVR</a></li>\n        <li><a href=\"https://steamcommunity.com/steamvr\">SteamVR</a></li>\n    </ul>\n</article>"
+    },
+    {
+      "title": "Références - Exemples d'applications en ligne",
+      "html": "<article class=\"page peu\">\n    <header>\n        <h1>Références - Exemples d'applications en ligne</h1>\n    </header>\n    <ul>\n        <li><a href=\"https://github.com/wizztjh/awesome-WebVR\">Liste d'exemples WebVR disponibles</a></li>\n    </ul>\n</article>"
     }
   ]
 }

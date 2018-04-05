@@ -1,14 +1,28 @@
 <article class="page peu">
     <header>
-        <h1>Débuter avec ReactVR</h1>
+        <h1>Exemple ReactVR</h1>
     </header>
+<code>
+    <pre>
+export default class reactTest extends React.Component {
+  render() {
+    return (
+      &lt;View&gt;
+        &lt;Pano source={asset('darkbureau.png')}/&gt;
+        &lt;Text
+          style={{
+            backgroundColor: '#000',
+            fontSize: 1,
+            fontWeight: '300',
+            transform: [{translate: [0, 0, -5]}],
+          }}&gt;
+          Station de travail
+        &lt;/Text&gt;
+      &lt;/View&gt;
+    );
+  }
+};
 
-    <ul>
-        <li><code>npm install -g react-vr-cli</code>: Installer l'outil de ligne de commande react vr</li>
-        <li><code>react-vr init VotreProjet</code>: Initialiser votre projet</li>
-        <li><code>npm install --save webvr-polyfill</code>: Pour ne pas oublier Safari</li>
-        <li>Modifier le fichier client.js pour ajouter le polyfill</li>
-        <li>Dans le répertoire <code>npm start</code>: Permet d'intéragir avec la scène 3D</li>
-        <li><code>AppRegistry.registerComponent</code>: Enregistrement du composant root. Initialiser une appplication ReactVR est comme React Native et non juste React. </li>
-    </ul>
+    </pre>
+</code>
 </article>

@@ -2,13 +2,13 @@
     <header>
         <h1>WebVR, le standard</h1>
     </header>
-    <h2>Éléments d'une application WebVR</h2>
+    <h2>Contrôles et extensions au GamePad API</h2>
     <ul>
-        <li>VRFrameData: Contient les données sur le frame à afficher à l'écran</li>
-        <li>window.requestAnimationFrame vs VRDisplay.requestAnimationFrame, boucles de rendering</li>
-        <li>VRPose: Contient les informations sur la position et l'orientation de l'appareil VR</li>
-        <li>Pour chaque oeil, nous créeons un frame dans un canvas WebGL, selon la position et l'orientation de l'oeil</li>
-        <li>Puis la frame est envoyée à l'écran</li>
+        <li>GamepadHapticActuator: permet d'envoyer un feedback à l'utilisateur (ex: vibrations)</li>
+        <li><code>gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { ... });</code></li>
+        <li>GamepadPose: position, orientation, vitesse et accélération du contrôleur dans l'espace 3D</li>
+        <li>(juste sur Firefox pour le moment / avril 2018)</li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">Documentation sur MDN</a></li>
     </ul>
     <code>
         <pre>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Spinner = () => (
-  <p>This is a spinner</p>
+  <p>&nbsp;</p>
 );
 
 export default Spinner;

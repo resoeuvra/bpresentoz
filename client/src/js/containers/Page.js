@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import HTMLPresentationPage from '../components/HTMLPresentationPage';
+import VRPresentationPage from '../components/VRPresentationPage';
 import {SHOW_TOOLS, HIDE_TOOLS} from "../actions/presentationActions";
 
 const mapStateToProps = state => {
@@ -22,7 +23,5 @@ const mapDispatchToProps = dispatch => {
   }
 };
 
-
-const Page = connect(mapStateToProps, mapDispatchToProps)(HTMLPresentationPage);
-
-export default Page;
+export const Page = connect(mapStateToProps, mapDispatchToProps)(HTMLPresentationPage);
+export const VRPage = connect(mapStateToProps, mapDispatchToProps)(VRPresentationPage);

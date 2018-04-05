@@ -21,7 +21,7 @@ function getPlugins() {
 
     plugins.push(new CopyWebpackPlugin([
         { from: 'config/' + CONFIG_FILE, to: "../../" + deployPath + 'config/config.js'},
-        { from: 'src/html/index.html', to: "../../" + deployPath + 'index.html'}
+        { from: 'src/html/index.html', to: "../../" + deployPath + 'presentation.html'}
         // todo : css
     ]));
 

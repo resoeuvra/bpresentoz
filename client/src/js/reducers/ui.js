@@ -8,7 +8,11 @@ import {
   HIDE_TOOLS,
   SHOW_PAGE,
   REQUEST_STEP,
+  SET_MODE,
+  MODES,
 } from '../actions/presentationActions';
+
+
 
 const initialState = {
   name: null,
@@ -19,6 +23,7 @@ const initialState = {
   tableOfContentShown: false,
   toolsShown:false,
   active:false,
+  mode: MODES.HTML,
 
 };
 
@@ -26,11 +31,9 @@ function presentationAppUI(state = initialState, action) {
   switch (action.type) {
     case START_PRESENTATION:
       return Object.assign({}, state, {
-        active: true,
-        pageShown: action.page,
         totalPages: action.totalPages,
-        stepShown:action.step,
         toolsShown:true,
+        pageShown:0,
         title: action.title,
         name: action.name,
       });
@@ -63,12 +66,17 @@ function presentationAppUI(state = initialState, action) {
       });
     case SHOW_PAGE:
       return Object.assign({}, state, {
+        active: true,
         pageShown: action.page,
         stepShown: 0,
       });
     case REQUEST_STEP:
       return Object.assign({}, state, {
         stepShown: action.step,
+      });
+      case SET_MODE:
+        return Object.assign({}, state, {
+        mode:action.mode
       });
 
     default:
