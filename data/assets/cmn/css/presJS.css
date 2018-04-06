@@ -252,8 +252,12 @@
 		background-color:#036;
 	}
 
-	.peu li, .peu p, .peu figcaption {
+	.peu li, .peu p, .peu figcaption, .peu dt, .peu dd {
 		font-size:1.5em
+	}
+
+	.peu li li {
+		font-size:0.8em
 	}
 
 	dl, p {
@@ -286,16 +290,19 @@
 		width:70%; display:block; margin-left:auto; margin-right:auto;
 	}
 
+	figure.figure-photo-moins > img{
+		width:50%; display:block; margin-left:auto; margin-right:auto;
+	}
+
 	figure.deux-images > img{
 		width:30%; display:inline-block; margin:10px;
 	}
 
-	flottant{
+	.flottant {
 		float:right
 	}
 
 }
-
 
 @media print {
 
