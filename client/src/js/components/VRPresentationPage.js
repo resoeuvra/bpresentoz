@@ -97,7 +97,7 @@ class VRPresentationPage extends React.Component {
     }
 
   touchStart(event) {
-    (this.props.currentPage < this.props.totalPages) ? this.next() : this.tableOfContents();
+    (this.props.currentPage < (this.props.totalPages-1)) ? this.next() : this.tableOfContents();
   }
 
     setupTouchEvents() {
