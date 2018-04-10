@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>Introduction à WebVR: Instructions</title>
+</head>
+<body>
+    <h1>Introduction à WebVR: Instructions</h1>
+    <ul>
+        <li><a href="/presentation.html#/intro-webvr">Présentation version HTML / React</a></li>
+        <li><a href="/presentation.html#/intro-webvr.VR">Présentation version VR</a> Vous devez avoir une manette ou ou bouton Carboard compatible pour changer de page.</li>
+        <li><a href="/presentation.html#/intro-webvr.VR.SL">Présentation version VR</a> Vous n'avez pas à changer de page, votre navigateur suivra celui du présentateur (communication par WebSocket).</li>
+
+    </ul>
+    <p>Notez qu'à cause d'une régression sur Chrome pour Android, il n'est pas possible d'utiliser la version VR pour le moment. Les dernières version de Chrome brisent le polyfill pour WebVR, et c'est ce que utilise A-FRAME.
+    Si vous utilisez Android, utiliser Firefox ou le navigateur Android de base.</p>
+</body>
+</html>
