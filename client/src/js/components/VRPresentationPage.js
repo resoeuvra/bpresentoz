@@ -52,6 +52,9 @@ class VRPresentationPage extends React.Component {
         this.timeStart = null;
     }
 
+
+
+
     gameLoop(me) {
         if (window.requestAnimationFrame && navigator.getGamepads) {
             const gp = navigator.getGamepads()[0];
@@ -93,6 +96,15 @@ class VRPresentationPage extends React.Component {
         }
     }
 
+  touchStart(event) {
+    (this.props.currentPage < this.props.totalPages) ? this.next() : this.tableOfContents();
+  }
+
+    setupTouchEvents() {
+      this.specificTouchStartEvent= this.touchStart.bind(this);
+      this.pageElement.addEventListener('touchstart', this.specificTouchStartEvent);
+    }
+
 
     componentDidMount() {
         // change document title
@@ -102,6 +114,7 @@ class VRPresentationPage extends React.Component {
         // setup listeners (keyboard, touch)
         window.addEventListener('keyup', this.specificKeyEvent);
         this.pageElement= document.getElementById('thepage' + this.props.currentPage);
+        this.setupTouchEvents();
         // setup gameloop
         this.gameLoop(this);
     }
@@ -111,9 +124,7 @@ class VRPresentationPage extends React.Component {
         // remove document title
         // remove listeners
         window.removeEventListener('keyup', this.specificKeyEvent);
-        this.pageElement.removeEventListener('touchmove', this.specificTouchMoveEvent);
         this.pageElement.removeEventListener('touchstart', this.specificTouchStartEvent);
-        this.pageElement.removeEventListener('touchend', this.specificTouchEndEvent);
         // stop gameloop
         if (this.startGameLoop!==null) {
             window.cancelAnimationFrame(this.startGameLoop);
@@ -127,7 +138,7 @@ class VRPresentationPage extends React.Component {
                 <Scene>
                     <a-asset>
                         <div style={{display:'none'}}>
-                            <div id="thePageTexture" dangerouslySetInnerHTML={createMarkup(this.props.html)}/>
+                            <div id="thePageTexture" className="VR" dangerouslySetInnerHTML={createMarkup(this.props.html)}/>
                         </div>
                     </a-asset>
                     <a-plane position="0 0 -350" rotation="0 0 0" width="512" height="512" draw="width:1024; height:1024" color="#7BC8A4" htmltexture="asset: #thePageTexture"></a-plane>

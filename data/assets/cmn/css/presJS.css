@@ -182,6 +182,12 @@
 		/*display:none;*/
 	}
 
+	.VR > .page {
+		left:3px !important;
+		right:3px !important;
+		font-size:110% !important;
+	}
+
 }
 
 
@@ -298,8 +304,13 @@
 		width:30%; display:inline-block; margin:10px;
 	}
 
+
 	.flottant {
 		float:right
+	}
+
+	code {
+		font-weight: bold;
 	}
 
 }

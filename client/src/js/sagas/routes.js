@@ -59,7 +59,7 @@ export const routes = {
             yield put({type: STOP_SLAVE_WEBSOCKET});
             break;
         default:
-            console.log("no changes");
+
     }
 
   },

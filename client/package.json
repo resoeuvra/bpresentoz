@@ -37,6 +37,7 @@
     "aframe": "^0.8.1",
     "aframe-htmltexture-component": "^0.2.1",
     "aframe-react": "^4.4.0",
+    "code-prettify": "^0.1.0",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",

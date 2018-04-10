@@ -5,18 +5,17 @@
     <h2>Contrôles et extensions au GamePad API</h2>
     <ul>
         <li>GamepadHapticActuator: permet d'envoyer un feedback à l'utilisateur (ex: vibrations)</li>
-        <li><code>gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { ... });</code></li>
+        <li><code class="prettyprint">gamepadHapticActuatorInstance.pulse(value, duration).then(function(result) { ... });</code></li>
         <li>GamepadPose: position, orientation, vitesse et accélération du contrôleur dans l'espace 3D</li>
         <li>(juste sur Firefox pour le moment / avril 2018)</li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">Documentation sur MDN</a></li>
     </ul>
     <figure>
-    <code>
         <pre>
+    <code class="prettyprint">
 navigator.getVRDisplays().then(function(displays) {
   // Utiliser l'écran de réalité virtuelle
-});
-        </pre>
-    </code>
+}); </code>
+    </pre>
     </figure>
 </article>

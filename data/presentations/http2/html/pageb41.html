@@ -5,7 +5,7 @@
     <ul>
         <li>Pris en charge par défaut - il n'y a rien à faire...</li>
         <li>Il faut toutefois modifier le format de nos certificats SSL de letsencrypt</li>
-        <li><code>openssl pkcs12 -inkey privkey1.pem -in fullchain1.pem -export -out iis_pfx.pfx</code></li>
+        <li><code class="prettyprint">openssl pkcs12 -inkey privkey1.pem -in fullchain1.pem -export -out iis_pfx.pfx</code></li>
         <li>Et configurer SSL
             <ol>
                 <li>Ouvrir IIS Manager</li>

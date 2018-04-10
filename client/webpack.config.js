@@ -73,7 +73,8 @@ module.exports = [{
     },
 
     externals: {
-        config: 'CONFIG'
+        config: 'CONFIG',
+        prettyprint: 'prettyprint'
     },
 
     plugins: getPlugins()

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {toggleTools} from '../action-creators/uiActionCreators';
-
+import CodePrettify from 'code-prettify';
 function createMarkup(html) {
   return {__html: html};
 }
@@ -77,6 +77,7 @@ class HTMLPresentationPage extends React.Component {
         if (gp.axes[1]===1) {console.log("1 1");}
         if (gp.axes[1]===-1) {console.log("1 -1");}
       }
+
       this.startGameLoop = window.requestAnimationFrame(function() {
         me.gameLoop(me)
       });
@@ -166,7 +167,13 @@ class HTMLPresentationPage extends React.Component {
     // setup touch events
     this.setupTouchEvents();
     // setup gameloop
+    PR.prettyPrint();
     this.gameLoop(this);
+
+  }
+
+  componentDidUpdate() {
+    PR.prettyPrint();
   }
 
   componentWillUnMount() {

@@ -8,20 +8,20 @@
         <li>WebGL, c'est sensiblement le standard OpenGL ES, Open GL pour systèmes embarqués (téléphones, tablettes), mais pour le Web</li>
         <li>Vous comprenez que nous n'apprendrons pas OpenGL... aujourd'hui. (Plusieurs semaines de cours)</li>
     </ul>
-    <figure><code><pre>
+    <figure><pre><code class="prettyprint">
         &lt;canvas id="canvas3d" width="800" height="560"&gt;
         Votre navigateur ne semble pas prendre en charge
         l'élément canvas.
         &lt;/canvas&gt;
-   </pre> </code></figure>
-    <figure><code><pre>
+    </code></pre></figure>
+    <figure><pre><code class="prettyprint">
         function initWebGL(canvas) {
-        try {
-        // Acquérir le context 3D de canvas ou la version expérimentale
-        gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-        } catch(e) {
-        console.log("Impossible d'aquérir le contexte canvas 3D");
+            try {
+                // Acquérir le context 3D de canvas ou la version expérimentale
+             gl = canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
+            } catch(e) {
+                console.log("Impossible d'aquérir le contexte canvas 3D");
+            }
         }
-        }
-    </pre></code></figure>
+    </code></pre></figure>
 </article>
