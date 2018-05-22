@@ -25,24 +25,30 @@ function getPlugins() {
         // todo : css
     ]));
 
+    plugins.push(
+      new webpack.optimize.UglifyJsPlugin({
+        include: /\.min\.js$/,
+        minimize:true
+      })
+    );
     return plugins;
 }
 
 module.exports = [{
 
-    // https://webpack.js.org/configuration/devtool/
-    devtool: "inline-source-map",
+    devtool: "source-map",
 
     resolve: {
         extensions: [".js", ".json", "jsx", "ts", "tsx"]
     },
 
     entry:{
-        presentation: './src/js/main.js'
+        "presentation": './src/js/main.js',
+        "presentation.min": './src/js/main.js'
     },
     output: {
         path: path.join(__dirname, buildPath + "js"),
-        filename: 'presentation.js',
+        filename: "[name].js",
     },
     module: {
         rules: [
