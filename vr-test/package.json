@@ -10,7 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
-    "html2canvas": "^1.0.0-alpha.10",
+    "fsevents": "^1.2.4",
+    "html2canvas": "^1.0.0-alpha.12",
     "ovrui": "~2.0.0",
     "react": "16.0.0",
     "react-native": "~0.48.0",

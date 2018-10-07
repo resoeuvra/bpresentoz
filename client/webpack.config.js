@@ -7,6 +7,7 @@ const path = require("path");
 const webpack = require("webpack");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const WebPackDeployAfterBuild = require('webpack-deploy-after-build');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const deployPath = "./public-assets/";
 const buildPath = "./dist/";
@@ -25,12 +26,6 @@ function getPlugins() {
         // todo : css
     ]));
 
-    plugins.push(
-      new webpack.optimize.UglifyJsPlugin({
-        include: /\.min\.js$/,
-        minimize:true
-      })
-    );
     return plugins;
 }
 
@@ -66,15 +61,15 @@ module.exports = [{
                 ],
                 loader: 'ts-loader'
             },
-//            {
-//                enforce: 'pre',
-//                test: /\.js$/,
-//                include: [
-//                    path.resolve(__dirname, "src/js")
-//                ],
-//                loader: 'eslint-loader'
-//            }
+        ]
+    },
 
+    optimization: {
+        minimize:true,
+        minimizer: [
+            new UglifyJsPlugin({
+                include: /\.min\.js$/,
+            })
         ]
     },
 

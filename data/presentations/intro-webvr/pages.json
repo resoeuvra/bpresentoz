@@ -95,6 +95,10 @@
       "html": "<article class=\"page\">\n    <header>\n        <h1>Exemple Vizor</h1>\n    </header>\n    <iframe src=\"/assets/content/vizor-test-iframe.html\" width=\"100%\" height=\"100%\"></iframe>\n</article>"
     },
     {
+      "title": "",
+      "html": "<script src=\"https://aframe.io/aframe/dist/aframe-master.js\"></script>\n<a-scene>\n\n    <a-assets>\n        <img id=\"texture\" src=\"../../img/darkbureau.png\">\n    </a-assets>\n\n    <a-sky src=\"#texture\"></a-sky>\n</a-scene>"
+    },
+    {
       "title": "Outils de développement",
       "html": "<article class=\"page\">\n    <header>\n        <h1>Outils de développement</h1>\n    </header>\n    <figure class=\"figure-photo\">\n        <img src=\"/intro-webvr/img/cyber-glasses.jpg\" alt=\"Cyber lunettes\">\n    </figure>\n</article>"
     },
